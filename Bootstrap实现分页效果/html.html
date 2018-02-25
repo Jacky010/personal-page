@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html style="padding-bottom: 54px;">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+
+    <title>jquery</title>
+	
+    <script src="jquery.min.js" charset="utf-8"></script>
+    <script src="bootstrap.custom.js" charset="utf-8"></script>
+    <script src="bootstrap.min.js" charset="utf-8"></script>
+	
+    <script src="myjs.js" charset="utf-8"></script>
+    <link href="bootstrap.min.css" rel="stylesheet">
+	
+	<script type="text/javascript">
+		$(function(){
+			$(".pagination").createPage({
+				totalPage:30,
+				currPage:14,
+				turndown:'true',
+				backFn:function(p){
+					console.log("回调函数："+p);
+				}
+			});
+		})
+</script>
+</head>
+<body>
+	<div class="pagec" id="pagearea">
+		<ul class="pagination">
+			
+		</ul>
+	</div>
+</body>
+</html>
