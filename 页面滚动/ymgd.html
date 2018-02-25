@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>页面滚动特效</title>
+</head>
+<style>
+*{ margin:0; padding:0;}
+html{width:100%;
+	  height:100%;}
+body{width:100%;
+	  height:100%;
+	   overflow:hidden;}
+.box{ width:100%;
+	  height:100%;
+	  background: center url(img/1.jpg) no-repeat;
+	  background-size:cover;}
+#icon{ position:fixed;
+	   top:50%;
+	   left:50px;}
+#icon ul li{ list-style:none;
+			 width:20px;
+			 height:20px;
+			 border:2px #FFF solid;
+			 border-radius:50%;
+			 margin-top:10px;}
+.curr{ background-color:#FFF;}			 
+</style>
+<body>
+<div class="box">
+</div>
+<div class="box" style="background-image:url(img/2.jpg)">
+</div>
+<div class="box" style="background-image:url(img/3.jpg)">
+</div>
+<div class="box" style="background-image:url(img/4.jpg)">
+</div>
+<div id="icon">
+	<ul>
+    	<li class="curr"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+	</ul>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script>
+	var w=$("body").width();
+	var h=$("body").height();
+	$("#icon ul li").mouseover( function()
+	{$(this).addClass("curr").siblings().removeClass("curr");
+	index=$(this).index();
+	$("body,html").animate({"scrollTop" : index*h+"px"},1000);
+		});
+		var nowtime=new Date();
+		$(document).mousewheel( function(ev,dr){
+			if(new Date-nowtime>1000){
+			nowtime=new Date();
+			if(dr<0){
+				index++;
+				index%=$("#icon ul li").size();
+				}
+				else{
+					index--;
+					if(index<0)index=$("#icon ul li").size()-1;}
+			$("#icon ul li").eq(index).addClass("curr").siblings().removeClass("curr");
+			$("body,html").animate({"scrollTop" : index*h+"px"},1000);}
+			});
+		setTimeout(function(){$(document).scrollTop(0);},30);
+</script>
+</body>
+</html>
