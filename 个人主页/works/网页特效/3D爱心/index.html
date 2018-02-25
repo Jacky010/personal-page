@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Description" content="">
+  <title>Love</title>
+  <style>
+		*{
+			margin:0;padding:0;list-style:none;
+		}
+		body{background:#000;}
+		#music{
+			position:fixed;
+			width:80px;
+			height:80px;
+			top:5px;
+			right:5px;
+			z-index:5;
+			border:4px solid red;
+			border-radius:50%;
+			background:#fff;
+		}
+		#music > img:first-of-type{
+			position:absolute;
+			z-index:1;
+			top:24%;
+			right:2.5%;
+			width:28.421%;
+		}
+		#music > img:last-of-type{
+			position:absolute;
+			width:79%
+			top:0;
+			left:0;
+			right:0;
+			bottom:2px;
+			margin:auto;
+			z-index:0;
+		}
+		 #music > img.play{
+            -webkit-animation:music_disc 4s linear infinite;
+            -ms-animation:music_disc 4s linear infinite;
+             -o-animation:music_disc 4s linear infinite;
+             animation:music_disc 4s linear infinite;
+        }
+        @keyframes music_disc{
+            0%{
+                 -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                 -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+		.con{
+			width:150px;
+			height:240px;
+			position:absolute;
+			transform-style:preserve-3d;
+			transform-origin:center center center;
+			animation:spin 15s infinite linear;
+			margin:auto;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+		}
+		.con [class^="box"]{
+			width:150px;
+			height:240px;
+			border:solid #cc0000;
+			border-width:1px 1px 0px 0px;
+			border-radius:50% 50% 0% / 40% 50% 0%;
+			position:absolute;
+		}
+		.con [class$="1"]{
+			transform:rotateY(10deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="2"]{
+			transform:rotateY(20deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="3"]{
+			transform:rotateY(30deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="4"]{
+			transform:rotateY(40deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="5"]{
+			transform:rotateY(50deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="6"]{
+			transform:rotateY(60deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="7"]{
+			transform:rotateY(70deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="8"]{
+			transform:rotateY(80deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="9"]{
+			transform:rotateY(90deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="10"]{
+			transform:rotateY(100deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="11"]{
+			transform:rotateY(110deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="12"]{
+			transform:rotateY(120deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="13"]{
+			transform:rotateY(130deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="14"]{
+			transform:rotateY(140deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="15"]{
+			transform:rotateY(150deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="16"]{
+			transform:rotateY(160deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="17"]{
+			transform:rotateY(170deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="18"]{
+			transform:rotateY(180deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="19"]{
+			transform:rotateY(190deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="20"]{
+			transform:rotateY(200deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="21"]{
+			transform:rotateY(210deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="22"]{
+			transform:rotateY(220deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="23"]{
+			transform:rotateY(230deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="24"]{
+			transform:rotateY(240deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="25"]{
+			transform:rotateY(250deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="26"]{
+			transform:rotateY(260deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="27"]{
+			transform:rotateY(270deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="28"]{
+			transform:rotateY(280deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="29"]{
+			transform:rotateY(290deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="30"]{
+			transform:rotateY(300deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="31"]{
+			transform:rotateY(310deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="32"]{
+			transform:rotateY(320deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="33"]{
+			transform:rotateY(330deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="34"]{
+			transform:rotateY(340deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="35"]{
+			transform:rotateY(350deg) rotateZ(45deg) translateX(46px);
+		}
+		.con [class$="36"]{
+			transform:rotateY(360deg) rotateZ(45deg) translateX(46px);
+		}
+		.square{
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			margin:80px auto;
+			transform:translateZ(40px);
+			transform-style:preserve-3d;
+			transform-origin:center center center;
+			perspective:900px;
+			/* animation:spining 15s infinite linear; */ 
+			
+		}
+		.pic{
+			width:80px;
+			height:80px;
+			position:absolute;
+			backface-visibility:hidden;
+		}
+		.pic:nth-child(1){
+			top:-80px;
+			transform-origin:bottom;
+			transform:rotateX(90deg) translateX(35px);
+		}
+		.pic:nth-child(2){
+			top:80px;
+			transform-origin:top;
+			transform:rotateX(-90deg) translateX(35px);
+		}
+		.pic:nth-child(3){
+			left:-80px;
+			transform-origin:right;
+			transform:rotateY(-90deg) translateZ(-35px);
+		}
+		.pic:nth-child(4){
+			left:80px;
+			transform-origin:left;
+			transform:rotateY(90deg)translateZ(35px);
+		}
+		.pic:nth-child(5){
+			transform:translateZ(0px) translateX(35px);
+			top:0;
+			left:0;
+		}
+		.pic:nth-child(6){
+			top:0;
+			left:0;
+			transform:translateZ(-80px) translateX(35px);
+		}/*盖子*/
+		@keyframes spin{
+			0%{
+				transform:rotateX(0deg) rotateY(0deg);
+			}
+			100%{
+				transform:rotateX(360deg) rotateY(360deg);
+			}
+		}
+  </style>
+
+ </head>
+ <body>
+		<div id="music">
+		   <img src="images/music_pointer.png" >
+		   <img id="song" class="play" src="images/music_disc.png" >
+		</div>
+		<div class="con">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+			<div class="box4"></div>
+			<div class="box5"></div>
+			<div class="box6"></div>
+			<div class="box7"></div>
+			<div class="box8"></div>
+			<div class="box9"></div>
+			<div class="box10"></div>
+			<div class="box11"></div>
+			<div class="box12"></div>
+			<div class="box13"></div>
+			<div class="box14"></div>
+			<div class="box15"></div>
+			<div class="box16"></div>
+			<div class="box17"></div>
+			<div class="box18"></div>
+			<div class="box19"></div>
+			<div class="box20"></div>
+			<div class="box21"></div>
+			<div class="box22"></div>
+			<div class="box23"></div>
+			<div class="box24"></div>
+			<div class="box25"></div>
+			<div class="box26"></div>
+			<div class="box27"></div>
+			<div class="box28"></div>
+			<div class="box29"></div>
+			<div class="box30"></div>
+			<div class="box31"></div>
+			<div class="box32"></div>
+			<div class="box33"></div>
+			<div class="box34"></div>
+			<div class="box35"></div>
+			<div class="box36"></div>
+			<div class="square">
+				<div class="pic"><img src="images/1.png" style="width:80px;height:80px;" /></div>
+				<div class="pic"><img src="images/2.png" style="width:80px;height:80px;" /></div>
+				<div class="pic"><img src="images/3.png" style="width:80px;height:80px;" /></div>
+				<div class="pic"><img src="images/4.png" style="width:80px;height:80px;" /></div>
+				<div class="pic"><img src="images/5.png" style="width:80px;height:80px;" /></div>
+				<div class="pic"><img src="images/6.png" style="width:80px;height:80px;" /></div>
+			</div>
+		</div>
+		<canvas id="canvas"> 若当前浏览器无法查看，请更换其他浏览器</canvas>
+		<audio autoplay="true">
+			<source src="mp3/one.mp3" type="audio/mpeg"></source>
+		</audio>
+		<script>
+			   var song = document.getElementById("song");
+			   var audio = document.getElementsByTagName("audio")[0];
+				audio.addEventListener("ended",function(event){
+					song.setAttribute("class","");
+				},false);
+
+				song.onclick = function(){
+					if(audio.paused){
+						audio.play();
+						this.setAttribute("class","play");
+						//this.style.animationPlayState = "running";
+						//this.style.webkitAnimationPlayState = "running";
+				}
+					else{
+						audio.pause();
+						this.setAttribute("class","");
+						//this.style.animationPlayState = "paused";
+						//this.style.webkitAnimationPlayState = "paused";
+					};
+				}
+			    var can = document.getElementById('canvas');
+				var cxt = can.getContext('2d');
+				var w = window.innerWidth;
+				var h = window.innerHeight;
+				
+				can.width = w;
+				can.height = h;
+		
+				var num=150;
+				var arr = [];
+				for(var i=0;i<num;i++){
+						arr.push({
+							x:Math.random()*w,
+							y:Math.random()*h,
+							r:Math.random()*3+1,
+						})
+				}
+				function drawnum(){
+					cxt.clearRect(0,0,w,h);
+					cxt.fillStyle = "white";
+					cxt.beginPath();
+					for(var i=0;i<num;i++){
+						var p = arr[i];
+						cxt.moveTo(p.x,p.y);
+						cxt.arc(p.x,p.y,p.r,0,360,false)
+					}
+					cxt.fill();
+					cxt.closePath();
+					down();
+				}
+				//drawnum();
+				function down(){
+					for(var i=0;i<num;i++){
+						var p = arr[i];
+						p.y += Math.random()*5;
+						if(p.y>h){
+							p.y=0;
+						}
+					}
+				}
+				setInterval(drawnum,15);
+		</script>
+ </body>
+</html>

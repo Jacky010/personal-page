@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>贺卡祝福</title>
+    <style>
+       *{
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-size: 1.5625vw;
+            font-family: "微软雅黑";
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+        }
+        #music{
+            position: fixed;
+            top:3vh;
+            right: 4vw;
+            z-index: 5;
+            width: 15vw;
+            height: 15vw;
+            border: 4px solid #ef1639;
+            border-radius: 50%;
+            background:#FFF;
+        }
+        #music > img:first-of-type{
+            position: absolute;
+            top: 24%;
+            right: 2.5%;
+            z-index: 1;
+            width: 28.421%;
+        }
+        #music > img:last-of-type{
+            width: 79%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            margin: auto;
+        }
+        #music > img.play{
+            -webkit-animation:music_disc 4s linear infinite;
+            -ms-animation:music_disc 4s linear infinite;
+             -o-animation:music_disc 4s linear infinite;
+             animation:music_disc 4s linear infinite;
+        }
+        @keyframes music_disc{
+            0%{
+                 -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                 -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes music_disc{
+            0%{
+                 -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                 -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-ms-keyframes music_disc{
+            0%{
+                 -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                 -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-o-keyframes music_disc{
+            0%{
+                 -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                 -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        .page{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .page > .bg{
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+        }
+        #page1{
+            display:block;
+        }
+        #page1 > .bg{
+            background: url("images/p1_bg.jpg") no-repeat center center;
+            background-size: 100%;
+        }
+        #page1 > .p1_lantern{
+            position: absolute;
+            top: -3.4%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background: url("images/p1_lantern.png") no-repeat center bottom;
+            background-size: 100%;
+            width: 45vw;
+            height: 71.2vh;
+            font-size: 3.506rem;
+            color: #fff;
+            padding-top: 31vh;
+            -wibkit-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+               -o-box-sizing: border-box;
+                box-sizing: border-box;
+            text-align: center;
+        }
+        #page1 > .p1_lantern:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: -1;
+            content: "";
+            width: 30vw;
+            height: 30vh;
+            background: #d60b3b;
+            opacity: 0.5;
+            border-radius: 50%;
+            -webkit-box-shadow: 0 0 10vw 10vw #d60b3b;
+              -o-box-shadow: 0 0 10vw 10vw #d60b3b;
+               -ms-box-shadow: 0 0 10vw 10vw #d60b3b;
+            box-shadow: 0 0 10vw 10vw #d60b3b;
+            -webkit-animation:p1_lantern 0.5s infinite alternate;
+            -ms-animation:p1_lantern 0.5s infinite alternate;
+            -o-animation:p1_lantern 0.5s infinite alternate;
+            animation:p1_lantern 0.5s infinite alternate;
+        }
+        @keyframes p1_lantern{
+            0%{
+                opacity:0.5;
+                -webkit-transform: scale(0.8,0.8);
+                -o-transform: scale(0.8,0.8);
+                -ms-transform: scale(0.8,0.8);
+                transform: scale(0.8,0.8);
+            }
+            100%{
+                 opacity:1;
+            }
+        }
+         @-webkit-keyframes p1_lantern{
+            0%{
+                opacity:0.5;
+                -webkit-transform: scale(0.8,0.8);
+                -o-transform: scale(0.8,0.8);
+                -ms-transform: scale(0.8,0.8);
+                transform: scale(0.8,0.8);
+            }
+            100%{
+                 opacity:1;
+            }
+        }
+        @-o-keyframes p1_lantern{
+            0%{
+                opacity:0.5;
+                -webkit-transform: scale(0.8,0.8);
+                -o-transform: scale(0.8,0.8);
+                -ms-transform: scale(0.8,0.8);
+                transform: scale(0.8,0.8);
+            }
+            100%{
+                 opacity:1;
+            }
+        }
+        @-ms-keyframes p1_lantern{
+            0%{
+                opacity:0.5;
+                -webkit-transform: scale(0.8,0.8);
+                -o-transform: scale(0.8,0.8);
+                -ms-transform: scale(0.8,0.8);
+                transform: scale(0.8,0.8);
+            }
+            100%{
+                 opacity:1;
+            }
+        }
+        #page1 >.p1_bear{
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 9vh;
+            margin: auto;
+            background: url("images/p1_imooc.png") no-repeat center center;
+            background-size: 100%;
+            width: 27.656vw;
+            height: 18.63vh;
+        }
+        #page1 > .p1_words{
+            position: absolute;
+            font-size: 2.134rem;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 48px;
+            color: #231815;
+            text-align: center;
+        }
+        #page2{
+            display: none;
+            -webkit-transittion:0.5s;
+            transittion:0.5s;
+        }
+        #page2.fadeOut{
+            opacity: 0.3;
+            -webkit-transform: translate(0,-100%);
+            transform: translate(0,-100%);
+        }
+        #page2 > .p2_bg_loading{
+            z-index: 4;background: #ef1639;
+            -webkit-animation:p2_bg_loading 1s linear forwards;
+            -ms-animation:p2_bg_loading 1s linear forwards;
+            -o-animation:p2_bg_loading 1s linear forwards;
+            animation:p2_bg_loading 1s linear forwards;
+        }
+        @keyframes p2_bg_loading{
+            0%{
+                opacity:1;
+            }
+            100%{
+                 opacity:0;
+            }
+        }
+        @-webkit-keyframes p2_bg_loading{
+            0%{
+                opacity:1;
+            }
+            100%{
+                 opacity:0;
+            }
+        }
+        @-ms-keyframes p2_bg_loading{
+            0%{
+                opacity:1;
+            }
+            100%{
+                 opacity:0;
+            }
+        }
+        @-o-keyframes p2_bg_loading{
+            0%{
+                opacity:1;
+            }
+            100%{
+                 opacity:0;
+            }
+        }
+        #page2 > .bg{
+            background: url("images/p2_bg.jpg") no-repeat center center;
+            background-size: 100%;
+        }
+        #page2 > .p2_circle{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            background: url("images/p2_circle_outer.png") no-repeat center center;
+            background-size: 100%;
+            width: 59.375vw;
+            height: 59.375vh;
+            border-radius: 50%;
+            -webkit-animation:p2_circle_outer 1s linear 3s infinite;
+            -ms-animation:p2_circle_outer 1s linear 3s infinite;
+            -o-animation:p2_circle_outer 1s linear 3s infinite;
+            animation:p2_circle_outer 1s linear 3s infinite;
+        }
+        @keyframes p2_circle_outer{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(-360deg);
+                -o-transform: rotate(-360deg);
+                -ms-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+        @-webkit-keyframes p2_circle_outer{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(-360deg);
+                -o-transform: rotate(-360deg);
+                -ms-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+        @-ms-keyframes p2_circle_outer{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(-360deg);
+                -o-transform: rotate(-360deg);
+                -ms-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+        @-o-keyframes p2_circle_outer{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(-360deg);
+                -o-transform: rotate(-360deg);
+                -ms-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+        #page2 > .p2_circle:before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            content: "";
+            background: url("images/p2_circle_middle.png") no-repeat center center;
+            background-size: 100%;
+            width: 45.625vw;
+            height: 45.625vh;
+            border-radius: 50%;
+            -webkit-animation:p2_circle_middle 1s linear 2s infinite;
+            -ms-animation:p2_circle_middle 1s linear 2s infinite;
+            -o-animation:p2_circle_middle 1s linear 2s infinite;
+            animation:p2_circle_middle 1s linear 2s infinite;
+        }
+        @keyframes p2_circle_middle{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(720deg);
+                -o-transform: rotate(720deg);
+                -ms-transform: rotate(720deg);
+                transform: rotate(720deg);
+            }
+        }
+        @-webkit-keyframes p2_circle_middle{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(720deg);
+                -o-transform: rotate(720deg);
+                -ms-transform: rotate(720deg);
+                transform: rotate(720deg);
+            }
+        }
+        @-ms-keyframes p2_circle_middle{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(720deg);
+                -o-transform: rotate(720deg);
+                -ms-transform: rotate(720deg);
+                transform: rotate(720deg);
+            }
+        }
+        @-o-keyframes p2_circle_middle{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(720deg);
+                -o-transform: rotate(720deg);
+                -ms-transform: rotate(720deg);
+                transform: rotate(720deg);
+            }
+        }
+        #page2 > .p2_circle:after{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            content: "";
+            background: url("images/p2_circle_inner.png") no-repeat center center;
+            background-size: 100%;
+            width: 39.9375vw;
+            height: 39.9375vh;
+            border-radius: 50%;
+            -webkit-animation:p2_circle_inner 1s linear 1s infinite;
+            -o-animation:p2_circle_inner 1s linear 1s infinite;
+            animation:p2_circle_inner 1s linear 1s infinite;
+        }
+        @keyframes p2_circle_inner{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(-1080deg);
+                -o-transform: rotate(-1080deg);
+                -ms-transform: rotate(-1080deg);
+                transform: rotate(-1080deg);
+            }
+        }
+        @-webkit-keyframes p2_circle_inner{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(-1080deg);
+                -o-transform: rotate(-1080deg);
+                -ms-transform: rotate(-1080deg);
+                transform: rotate(-1080deg);
+            }
+        }
+        @-ms-keyframes p2_circle_inner{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(-1080deg);
+                -o-transform: rotate(-1080deg);
+                -ms-transform: rotate(-1080deg);
+                transform: rotate(-1080deg);
+            }
+        }
+        @-o-keyframes p2_circle_inner{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(-1080deg);
+                -o-transform: rotate(-1080deg);
+                -ms-transform: rotate(-1080deg);
+                transform: rotate(-1080deg);
+            }
+        }
+        #page2 > .p2_2016{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            background: url("images/p2_2016.png") no-repeat center center;
+            background-size: 100%;
+            width: 27.5vw;
+            height: 6.24vh;
+        }
+        #page3{
+            display: none;
+            -webkit-transition:0.5s;
+            transition: 0.5s
+        }
+        #page3.fadeIn{
+            -webkit-transform: translate(0,-100%);
+            transform: translate(0,-100%);
+        }
+        #page3 > .bg{
+            background: url("images/p3_bg.jpg") no-repeat center center;
+            background-size: 100%;
+        }
+        #page3 > .p3_logo{
+            position: absolute;
+            width: 50vw;
+            height: 25vh;
+            top: 7.82vh;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background: url("images/p3_title.jpg") no-repeat center center;
+            background-size: 100%;
+        }
+        #page3 > .p3_second{
+            position: absolute;
+            width: 22.8125vw;
+            height: 41.652vh;
+            top: 25.48vh;
+            left: 3.75vw;
+            background: url("images/p3_couplet_second.png") no-repeat center center;
+            background-size: 100%;
+        }
+        #page3 > .p3_first{
+           position: absolute;
+            width: 22.8125vw;
+            height: 41.652vh;
+            top: 25.48vh;
+            right: 3.75vw;
+            background: url("images/p3_couplet_first.png") no-repeat center center;
+            background-size: 100%;
+        }
+        #page3 > .p3_blessing{
+            position: absolute;
+            width: 32vw;
+            height: 32vw;
+            bottom: 10vh;
+            right: 0;
+            left: 0;
+            border-radius: 50%;
+            margin: auto;
+            background: url("images/p3_blessing.png") no-repeat center center;
+            background-size: 100%;
+            -webkit-animation:p3_blessing 2s linear infinite;
+            -ms-animation:p3_blessing 2s linear infinite;
+            -o-animation:p3_blessing 2s linear infinite;
+            animation:p3_blessing 2s linear infinite;
+        }
+        @keyframes p3_blessing{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                 -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes p3_blessing{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                 -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-ms-keyframes p3_blessing{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                 -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-o-keyframes p3_blessing{
+            0%{
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>    
+</head>
+<body>
+   <div id="music">
+       <img src="images/music_pointer.png" >
+       <img id="song" class="play" src="images/music_disc.png" >
+   </div>
+   <div class="page" id="page1">
+       <div class="bg"></div>
+       <div class="p1_lantern">
+           点击屏幕<br>开启好运2016
+       </div>
+       <div class="p1_bear"></div>
+       
+   </div>
+   <div class="page" id="page2">
+       <div class="bg p2_bg_loading"></div>
+       <div class="bg"></div>
+       <div class="p2_circle"></div>
+       <div class="p2_2016"></div>
+   </div>
+   <div class="page" id="page3">
+       <div class="bg"></div>
+       <div class="p3_logo"></div>
+       <div class="p3_second"></div>
+       <div class="p3_first"></div>
+       <div class="p3_blessing"></div>
+   </div> 
+   <audio autoplay="true">
+       <source src="audio/song.mp3" type="audio/mpeg"></source>
+   </audio>
+   <script>
+    window.onload = function(){
+    var song = document.getElementById("song");
+    var audio = document.getElementsByTagName("audio")[0];
+    
+    var page1 = document.getElementById("page1");
+    var page2 = document.getElementById("page2");
+    var page3 = document.getElementById("page3");
+    //当音乐播放完停止时候，自动停止光盘旋转
+    audio.addEventListener("ended",function(event){
+        song.setAttribute("class","");
+    },false);
+        
+    //点击音乐图标，控制音乐播放效果
+    /*song.onclick = function(){
+        if(audio.paused){
+            audio.play();
+            this.setAttribute("class","play");
+            //this.style.animationPlayState = "running";
+            //this.style.webkitAnimationPlayState = "running";
+        }
+        else{
+            audio.pause();
+            this.setAttribute("class","");
+            //this.style.animationPlayState = "paused";
+            //this.style.webkitAnimationPlayState = "paused";
+        };
+    }*/
+    song.addEventListener("touchstart",function(event){
+        if(audio.paused){
+                audio.play();
+                this.setAttribute("class","play");
+                //this.style.animationPlayState = "running";
+                //this.style.webkitAnimationPlayState = "running";
+            }
+            else{
+                audio.pause();
+                this.setAttribute("class","");
+                //this.style.animationPlayState = "paused";
+                //this.style.webkitAnimationPlayState = "paused";
+            };
+        },false);
+    };
+    //点击屏幕，开启翻页效果
+    page1.addEventListener("touchstart",function(event){
+        this.style.display = "none";
+        page2.style.display = "block";
+        page3.style.display = "block";
+        page3.style.top = "100%";
+        
+        setTimeout(function(){
+            page2.setAttribute("class","page fadeOut");
+            page3.setAttribute("class","page fadeIn");
+        },5500);
+    },false);
+    </script>
+</body>
+</html>

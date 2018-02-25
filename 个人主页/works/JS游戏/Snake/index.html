@@ -1,0 +1,460 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JS特效网页版的贪吃蛇游戏</title>
+<meta name="keywords" content="JS代码,贪吃蛇,网页游戏," />
+<style type="text/css">
+		*{margin:0;padding:0;}
+		#box{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		#square{
+			position: relative;
+			width: 1000px;
+			height: 500px;
+			background: #006600;	
+		}
+		#control{
+			width: 1000px;
+			height: 60px;
+			line-height: 60px;
+			background: #00ffff;
+		}
+		#title{
+			float: left;
+			margin-left: 10px;
+			font-size:30px;
+			color:#330000;
+			font-family:'微软雅黑';
+			font: bold 18px;
+		}
+		#button{
+			float: right;
+			margin-right: 10px;
+		}
+		ul#speed{
+			float: left;
+			margin: 10px auto;
+			height: 40px;
+			line-height: 40px;
+			list-style: none;
+			text-align: center;
+		}
+		#speed li{
+			cursor: pointer;
+			background: #cc0000;
+			float: left;
+			width: 60px;
+			height: 100%;
+			margin-right: 12px;
+			border-radius: 30px;
+		}
+		#sm{
+			width:1000px;
+			height:105px;
+			margin:0 auto;
+			background:#00ffff;
+		}
+		.sm-left{
+			width:700px;
+			float:left;
+		}
+		.sm-left h4{
+			margin-left:10px;
+		}
+		.sm-left p{
+			margin-left:10px;
+			font-family:'微软雅黑';
+			line-height:20px;
+		}
+		.sm-right{
+			float:right;
+		}
+		.food{
+			position: absolute;
+			background: #8b0 url(img/food.png);
+		}
+		.block{
+			float: left;
+			width: 20px;
+			height: 20px;
+			overflow: hidden;
+		}
+		.snake-block{
+			position: absolute;
+			background: red;
+		}
+		#h-down,#t-down{
+			transform: rotate(90deg);
+			-ms-transform: rotate(90deg);		/* IE 9 */
+			-webkit-transform: rotate(90deg);	/* Safari and Chrome */
+			-o-transform: rotate(90deg);		/* Opera */
+			-moz-transform: rotate(90deg);		/* Firefox */
+		}
+		#h-up,#t-up{
+			transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);		/* IE 9 */
+			-webkit-transform: rotate(-90deg);	/* Safari and Chrome */
+			-o-transform: rotate(-90deg);		/* Opera */
+			-moz-transform: rotate(- 90deg);		/* Firefox */
+		}
+		
+		#h-left,#t-left{
+			transform: rotate(180deg);
+			-ms-transform: rotate(180deg);		/* IE 9 */
+			-webkit-transform: rotate(180deg);	/* Safari and Chrome */
+			-o-transform: rotate(180deg);		/* Opera */
+			-moz-transform: rotate(180deg);		/* Firefox */
+		}
+		
+
+	</style>
+</head>
+<body>
+<div id="box">
+  <div id="square"> </div>
+  <div id="control"> <span id="title">贪吃蛇网页游戏</span>
+    <ul id="speed">
+      <li >一级</li>
+      <li >二级</li>
+      <li >三级</li>
+      <li id="sub-v">减速</li>
+      <li id="add-v">加速</li>
+    </ul>
+    <span></span>
+    <div id="button">
+      <button id="start" style="width:100px;height:50px;background:#00cc00">开始</button>
+      <button id="purse"  style="width:100px;height:50px;background:#ff0000">暂停</button>
+    </div>
+  </div>
+  <div id="sm">
+		<div class="sm-left">
+			<h4>贪吃蛇玩法：</h4>
+			<p>用游戏键盘上下左右控制蛇的方向,寻找吃的食物,每吃一口就能得到一定的积分[<em>当吃到食物大于10小于40时,属于奖励时间(食物*2),大于40恢复正常(食物*1)</em>],游戏中途可点击一级、二级、三级、减速、加速增加或减慢游戏速度,若身子长度越长,则游戏的难度就越大,且不能碰墙,不能咬到自己的身体更不能咬自己的尾巴.<strong>(注:不能同时按住两个键，不然游戏会崩溃=_=|||)</strong></p>
+		</div>
+		<div class="sm-right">
+			<img src="img/key.jpg" style="width:230px;height:105px;"/>
+		</div>
+  </div>
+</div>
+<script type="text/javascript">
+		var Ground = document.getElementById('square');
+		var Control = document.getElementById('control');
+		var aSpan = Control.getElementsByTagName('span');
+		var SubDiv = createDiv();
+		SubDiv.style.display = "none";
+		Ground.appendChild(SubDiv);
+
+		//创建蛇
+		var aSnaker = [];
+			for(var i=3;i>0; i--){
+				var oDiv = document.createElement('div');
+				oDiv.style.left = i*20+'px';
+				oDiv.style.top = '60px';
+				oDiv.className = "block snake-block";
+				if(i==3)
+				oDiv.style.background = "url(img/head.png)";
+				else if(i==2)
+				oDiv.style.background = "url(img/body.png)";
+				else 
+				oDiv.style.background = "url(img/tail.png)";
+				aSnaker.push(oDiv);
+				Ground.appendChild(oDiv);
+			}
+
+			var oFood;
+			function divPos(){
+				var iLeft,iTop;
+				var flag = false;
+
+				do{
+					iLeft = parseInt(Math.random()*50)*20+'px';
+					iTop = parseInt(Math.random()*25)*20+'px';
+
+					for(var i=0;i<aSnaker.length;i++){
+						if(iLeft==aSnaker[i].style.left && iTop==aSnaker[i].style.top){
+							flag = true;
+							break;
+						}
+					}
+				}while(flag)
+
+				return {iLeft:iLeft,iTop:iTop};
+			}
+			function createFood(){//创建食物
+				oFood = document.createElement('div');
+				oFood.style.left = divPos().iLeft;
+				oFood.style.top = divPos().iTop;
+				oFood.className = 'block food';
+				Ground.appendChild(oFood);
+			}
+			createFood();
+
+			function createDiv(){
+				var oDiv = document.createElement("div");
+				oDiv.className = "block";
+				oDiv.style.background = "url(img/food.png)";
+				oDiv.style.position = "absolute";
+				return oDiv;
+			}
+			function addDiv(tailTop,tailLeft){
+				var oDiv = createDiv();
+				oDiv.style.top = tailTop +"px";
+				oDiv.style.left = tailLeft+"px";
+				Ground.appendChild(oDiv);
+				aSnaker.splice(aSnaker.length-1,0,oDiv);
+			}
+
+			//食物添加到尾巴的前面后计算尾巴现在应有的坐标
+			function priTail(headLeft,headTop,tailLeft,tailTop,moveDir){
+			//	console.log(tailLeft+','+tailTop+','+headLeft+','+headTop);
+					if(tailLeft == headLeft||moveDir=="right" || moveDir=="left"){
+						if(tailTop>headTop)
+							tailTop -= 20;
+						else if(tailTop<headTop)
+							tailTop += 20;
+				//	console.log(tailLeft+','+tailTop+','+headLeft+','+headTop);
+					}else if(tailTop == headTop||moveDir=="up" || moveDir=="down"){
+						if(tailLeft >headLeft)
+							tailLeft -= 20;
+						else if(tailLeft>headLeft)
+							tailLeft += 20;
+				//	console.log(tailLeft+','+tailTop+','+headLeft+','+headTop);
+					}		
+					return {tailTop: tailTop,
+						tailLeft:tailLeft};
+			}
+			//食物达到一定数量吃到SubDiv就减去一段身体，但计数值仍增长
+			function subDiv(){
+
+			}
+			var sum = 0;//对吃的食物数计数
+			var moveDir = 'right';
+			function move(){
+				//蛇身整体移动
+				for(var i=aSnaker.length-1;i>0;i--){
+					aSnaker[i].style.left = aSnaker[i-1].style.left;
+					aSnaker[i].style.top = aSnaker[i-1].style.top;
+					//console.log(i+','+aSnaker[i].style.left+','+aSnaker[i].style.top);
+				}
+				var snakeHead = aSnaker[0];
+				var headLeft = parseInt(snakeHead.style.left);
+				var headTop = parseInt(snakeHead.style.top);
+				switch(moveDir){
+					case "left":
+						headLeft -= 20;
+						break;
+					case "right":
+						headLeft += 20;
+						break;
+					case "up":
+						headTop -= 20;
+						break;
+					case "down":
+						headTop += 20;
+						break;
+				}
+				snakeHead.style.left = headLeft+'px';
+				snakeHead.style.top = headTop+'px';
+				aSnaker[0].id = "h-"+moveDir;
+
+				//与蛇身相撞结束游戏
+				for(var i=1;i<aSnaker.length;i++){
+						if(snakeHead.style.left==aSnaker[i].style.left && snakeHead.style.top==aSnaker[i].style.top){
+							reStart();
+						}
+					}
+
+				//撞墙游戏结束
+				if(snakeHead.style.left < "0px"|| snakeHead.style.top < "0px" || snakeHead.style.top== "500px" || snakeHead.style.left == "1000px"){
+					reStart();
+				}
+				
+				var snakeTail = aSnaker[aSnaker.length-1];//获取当前的尾巴
+				//尾巴的转向，根据前一个的位置设置方向
+				if(snakeTail.style.top<aSnaker[aSnaker.length-2].style.top)
+					snakeTail.id = "t-down";
+				else if(snakeTail.style.top>aSnaker[aSnaker.length-2].style.top)
+					snakeTail.id = "t-up";
+
+				if(snakeTail.style.left>aSnaker[aSnaker.length-2].style.left)
+					snakeTail.id = "t-left";
+				else if (snakeTail.style.left<aSnaker[aSnaker.length-2].style.left)
+					snakeTail.id = "";
+
+				var tailLeft = parseInt(snakeTail.style.left);
+				var tailTop = parseInt(snakeTail.style.top);
+				
+				//食物达到一定数量吃到SubDiv就减去一段身体，但计数值仍增长				
+				var random = parseInt(Math.random()*8); 
+				if(random==6 && sum>50 && oSubDiv.style.display=="none"){
+					oSubDiv.style.display = "block";
+					oSubDiv.style.left = divPos().iLeft;
+					oSubDiv.style.top = divPos().iTop;
+					
+					if(snakeHead.style.left == oSubDiv.style.left && snakeHead.style.top == oSubDiv.style.top){
+						
+						snakeTail.style.left = aSnaker[aSnaker.length-2].style.left;
+						snakeTail.style.top = aSnaker[aSnaker.length-2].style.top;
+						aSnaker.splice(aSnaker.length-3,aSnaker.length-2);
+						oSubDiv.style.display = "none";
+						
+					}
+					var t=setTimeout('oSubDiv.style.display="none"',5000);
+					
+				}
+				//吃到的食物添加到尾巴的前面，分别改变尾巴和食物的定位坐标值
+				if(snakeHead.style.left == oFood.style.left && snakeHead.style.top == oFood.style.top){
+					tailLeft = snakeTail.style.left;
+					tailTop = snakeTail.style.top;
+					oFood.style.background = "url(img/food.png)";
+					oFood.style.top = tailTop +"px";
+					oFood.style.left = tailLeft+"px";
+					sum++;
+					aSnaker.splice(aSnaker.length-1,0,oFood);
+					tailTop = priTail(headLeft,headTop,tailLeft,tailTop,moveDir).tailTop;	
+					tailLeft = priTail(headLeft,headTop,tailLeft,tailTop,moveDir).tailLeft;
+					if(sum>10&&sum<40){//食物达到一定数量有奖励
+						addDiv(tailTop,tailLeft);
+						sum++;	
+					}
+
+					tailTop = priTail(headLeft,headTop,tailLeft,tailTop,moveDir).tailTop;	
+					tailLeft = priTail(headLeft,headTop,tailLeft,tailTop,moveDir).tailLeft;
+					if(sum>=40){//继续奖励，不过吃的太多也会死的更快
+						addDiv(tailTop,tailLeft);
+						sum++;
+					}
+					aSpan[1].innerHTML = "已吃食物"+sum+"个";
+					/*tailTop = priTail(headLeft,headTop,tailLeft,tailTop,moveDir).tailTop;	
+					tailLeft = priTail(headLeft,headTop,tailLeft,tailTop,moveDir).tailLeft;*/
+					snakeTail.style.left = tailLeft+'px';
+					snakeTail.style.top = tailTop+'px';
+					createFood();
+					
+				}
+
+			}
+
+			var timer;
+			var timerFlag = true;
+			var oStart = document.getElementById('start');
+			oStart.onclick = function(){
+				if((timerFlag&&oStart.innerHTML != "结束")||oPurse.innerHTML=="恢复"){
+					oStart.innerHTML = "结束";
+					openTimer();
+					timerFlag = false;
+				}
+				else if(this.innerHTML =="结束"){
+					clearInterval(timer);
+					
+				}
+			};
+			
+			var oPurse = document.getElementById('purse');
+			oPurse.onclick = function(){
+				if(!timerFlag&&this.innerHTML!="恢复"&&oStart.innerHTML=="结束"){ 
+					this.innerHTML = "恢复";
+					clearInterval(timer);
+					timerFlag =!timerFlag;
+				}else{
+					
+					oStart.onclick();
+					this.innerHTML = "暂停";
+					timerFlag = !timerFlag;
+				}
+			};
+			var perTime = 300;
+			function openTimer(){
+				timer = setInterval(function(){//定时器
+						move();
+						
+					}, perTime);
+			}
+			//设置时间间隔，以改变速度
+			var oSpeed = document.getElementById('speed');
+			var aLi = oSpeed.getElementsByTagName('li');
+			for(var i=0;i<aLi.length;i++){//通过改变perTimer 改变时间
+				(function(index){
+				if(index<3){
+					aLi[index].onclick = function(){
+					clearInterval(timer);
+						switch (index){
+							case 0:
+								perTime = 400;
+								break;
+							case 1:
+								perTime = 200;
+								break;
+							case 2:
+								perTime = 60;
+								break;
+						}
+						if(oStart.innerHTML=="结束")
+						openTimer();
+					};
+				}
+				else if(index==3){
+					aLi[index].onclick = function(){
+						clearInterval(timer);
+						if(perTime>=50){
+							perTime += 50;
+						}
+						if(oStart.innerHTML=="结束")
+						openTimer();
+					};
+				}
+				else if(index == 4){
+					aLi[index].onclick = function(){
+						clearInterval(timer);
+						if (perTime<1000) {
+							perTime -=50;
+						}
+						if(oStart.innerHTML=="结束")
+						openTimer();
+					};
+				}
+				}
+				)(i);
+			}
+
+			function reStart(){//重新开始
+					clearInterval(timer);
+					var msg = confirm("此次游戏失败，要重新开始吗？");
+							
+							if(msg)
+							window.location.reload();
+				}
+
+			document.onkeydown = function(e){//设置转向
+				e = e||window.event;
+				var keyCode = e.which || e.keyCode;
+				switch (keyCode){
+					case 37://左
+						if(moveDir!="right"){
+							moveDir = "left";
+						}
+					break;
+					case 38://上
+						if(moveDir!="down"){
+							moveDir = "up";
+						}
+					break;
+					case 39://右
+						if(moveDir!="left"){
+							moveDir = "right";
+						}
+					break;
+					case 40://下
+						if(moveDir!="up"){
+							moveDir = "down";
+						}
+					break;
+				}
+			
+			}
+		</script>
+</body>
+</html>

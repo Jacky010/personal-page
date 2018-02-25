@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人简历</title>
+<meta name="keywords" content="蒋杰，蒋杰个人主页，蒋杰个人简介，个人主页，个人博客，个人作品" />
+<meta name="description" content="蒋杰个人主页，是专门为蒋杰个人所建设的个人展示平台，采用前后端开发知识，一边学习，一边创作！" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+
+<script language="javascript" type="text/javascript">
+function clearText(field){
+
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js"></script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "menu", 
+	orientation: 'h', 
+	classname: 'ddsmoothmenu', 
+	contentsource: "markup" 
+})
+
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	<div id="header">
+    	<div id="site_title"><h1><a href="#">蒋杰主页</a></h1></div>
+        <div class="cleaner"></div>
+    </div> <!-- end of header -->
+    <div id="menu" class="ddsmoothmenu">
+        <ul>
+            <li><a href="index.html">主页</a></li>
+            <li><a href="info.html" class="selected">个人简介</a>
+                <ul>
+                    <li><a href="resume.html" >个人简历</a></li>
+                    
+              	</ul>
+            </li>
+            <li><a href="myworks.html">个人作品</a>
+                <ul>
+                    <li><a href="web_designs.html">网页设计</a></li>
+                    <li><a href="web_effects.html">网页特效</a></li>
+                    <li><a href="js_games.html">JS游戏</a></li>
+                    <li><a href="php_works.html">PHP作品</a></li>
+              	</ul>
+            </li>
+            <li><a href="blog.html">博客</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+        <div id="search_box">
+            <form action="#" method="get">
+                <input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                <input type="submit" name="Search" value="" id="searchbutton" title="Search" />
+            </form>
+        </div>
+        <br style="clear: left" />
+    </div> <!-- end of menu -->
+    <div id="contents">
+   	    <div id="main_top">
+   	    		<div id="main_top_left">
+   	    			<div class="main_Lphoto">
+   	    				<img src="images/photo_s.jpg" alt="photo"/>
+   	    			</div>
+   	    			<div class="main_Linfo">
+   	    				<h4>蒋杰</h4>
+   	    				<ul>
+   	    					<li><a href="#" class="birth"></a>生日：1994.04</li>
+   	    					<li><a href="#" class="weizhi"></a>所在地：成都</li>
+   	    					<li><a href="#" class="tel1"></a>电话：15085795432</li>
+   	    					<li><a href="#" class="mail1"></a>邮箱：1126651826@qq.com</li>
+   	    				</ul>
+   	    			</div>
+   	    		</div>
+   	    		<div id="main_top_right">
+   	    			<h1>Personal Resume</h1>
+   	    			<p>求职意向：Web前端开发工程师</p>
+   	    		</div>
+   	    		
+   	    </div>
+		<div class="cleaner hr_divider"></div>
+		
+		<div id="main_middle">
+			<h2><span></span>个人技能</h2>
+            <div id="skills">
+            	<canvas id="myCanvas" width="940" height="290"></canvas>
+            	<script type="text/javascript" src="js/skillsCanvas.js"></script>
+            </div>
+		</div>
+        <div class="cleaner hr_divider"></div>
+        <div id="main_center">
+			<h2><span></span>校园实践</h2>
+            <div id="exams">
+            		<div class="exams_main">
+            			<ul>
+            				<li>2016.07-2016.10</li>
+            				<li><a href="http://www.uiring.com/zt/cyds2016/" target="_blank">全国大学生创新创业大赛四川省铜奖</a></li>
+            				<li>负责人</li>
+            			</ul>
+            		</div>
+            		<div id="exams_content">
+            			<div class="exams_context" ><p>作为负责人带领乐学邦团队参加全国大学生创新创业大赛，在比赛中获得四川省铜奖，同年十月获得成都理工大学互联网+大赛二等奖；在团队中负责乐学邦APP前端页面制作，该APP采用MUI框架开发界面，JQurey实现页面动态效果展示，后端则采用PHP开发。（右边所示视频是来自乐学邦APP参赛简介视频）</p></div>
+            			<div class="video">
+            				<video width="270" height="120" poster="images/video.png" id="myVideo" loop controls preload="auto" > 
+    							<source src="video/video.mp4"></source> 
+    							<script>
+							var myVideo = document.getElementById('myVideo')//获取video元素
+    								,tol = 0; //总时长
+							myVideo.addEventListener("loadedmetadata", function(){
+    								tol = myVideo.duration;//获取总时长
+							});
+							//播放
+						function play(){ 
+    							myVideo.play();
+						}
+							//暂停
+						function pause(){ 
+    							myVideo.pause();
+						}
+						//播放时间点更新时
+						myVideo.addEventListener("timeupdate", function(){
+    						var currentTime = myVideo.currentTime;//获取当前播放时间
+    						console.log(currentTime);//在调试器中打印
+						});
+						//设置播放点
+						function playBySeconds(num){ 
+    							myVideo.currentTime = num;
+						}//音量改变时
+						myVideo.addEventListener("volumechange", function(){
+						    var volume = myVideo.volume;//获取当前音量
+						    console.log(volume);//在调试器中打印
+						});//设置音量
+						function setVol(num){ 
+						    myVideo.volume = num;
+						}
+						</script>
+   						</video>
+            			</div>
+            		</div>
+            		<br />
+            		<div class="exams_main1">
+            			<ul>
+            				<li>2016.10</li>
+            				<li><a href="http://www.jiangjie.date" target="_blank">个人主页</a></li>
+            				
+            			</ul>
+            		</div>
+            		<div class="cleaner"></div>
+            		<div id="exams_content1">
+            			<p>个人主页运用HTML5,CSS3,Javascript等知识及技术制作而成，主页构建中运用了HTML5新特性Canvas API来绘图个人技能，使用video API来进行视频展示，在个人作品中使用各种技术制作精彩酷炫的网页特效，JS游戏等，对各种前端开发技术能熟练运用并进行相应的开发。</p>
+            			<p style="margin-top: -5px;">个人主页地址：www.jiangjie.date</p>
+            		</div>
+            </div>
+            <div class="cleaner"></div>
+		</div>
+        <div class="cleaner hr_divider"></div>
+        <div id="main_footer">
+			<h2><span></span>自我评价</h2>
+            <div id="goods">
+            		<ul>
+            			<li><a href="">职场自身能力：</a>认真负责，积极主动，敢于面对困难，敢于承担责任。</li>
+            			<li><a href="">策划执行能力：</a>能够完成上级下达的任务，执行能力强。</li>
+            			<li><a href="">团队协作能力：</a>学校团队模式的培养，为我带来了优秀的团队协调能力和管理能力。</li>
+            			<li><a href="">学习事物能力：</a>自学能力强，上进心强，动手能力强，创新意识强。</li>
+            		</ul>
+            </div>
+		</div>
+		<center><p style="font-size: 28px; color: #fff;margin-top: 15px;">感谢贵公司领导阅读我的简历，期待随时联系我！</p></center>
+    </div>
+    
+    
+    <!--
+    	<div id="bottom">
+    	<div class="col one_fourth">
+        	<h5>书籍推荐</h5>
+            <ul class="footer_link">
+            		<li><a href="http://baike.baidu.com/link?url=G1WVMqHAXZBVXdDku_dlL4GBDaEqtFDHhNcSCY6AFx8S716CZQySaOxdW7f627Z8UyI9sx5b7NZmDuSf7HiutG1cRtaRPEQnjuhuKsBsmY_Mb66j43PDG5NUp9PaXL18A0JG_kj3LcTTAiyn5jlKotMRabJVz177P56th7FA_aC" target="_blank">《HTML5与CSS3权威指南》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=NJLmMviV7a33yJCJx6jOI2tswZRqm9rC1hdKTW5DvFYu8gdSothy04cM4nbIuiLF1iJek9Nx4c1OkLyyEIOPRW3X-qbCE014bFASmtL2zv8I6ONvdfqWDdTM3dq59IW1gx1o1qISdLxCgwT01URD7q" target="_blank">《JavaScript设计模式》</a></li>
+                <li><a href="https://book.douban.com/subject/25823709/" target="_blank">《JQuery技术内幕》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=rKFlF_-cfBdCzoRS2RDC3eAQskxXBVnWoPUFJ56jHTbg_Rv2puansOhITdj5fBlC7i-hoDGrIkaFJX2-KI5RiipeRoQmczu5dpMXdn29x0Bx9uRJ0bLwKzbBqlkuCM7cRkzwjGzeVpVQWuzY7IMnjtpXu0aHAM4juA97P6clYUe" target="_blank">《JavaScript面向对象精要》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=KPiGp_bM1vmchS8uNSO6qEk4qGwrt6LpsK5Ak2niGXoCBTPbM8L5-_9x1W8QDcrSbTRXkKKvUsdX4M6PRiMQyM9pQblATIaG_r9aVFWjPuO3baV6P7MNWs4nShcHxfdQJGWBl_6Z2FB3MxXc27RMV-vSdeQ2LIsF_Uh2WyqYzYeUeNN2ibs27oJXnsqXq3_H#1" target="_blank">《Ajax经典案例开发大全》</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth">
+        	<h5>美文赏析</h5>
+            <ul class="footer_link">
+            		<li><a href="http://www.sanwen8.cn/subject/1401511/" target="_blank">采一笔清风流云，入眉</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1401317/" target="_blank">携一斛春色，沉醉</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1401238/" target="_blank">三月烟花，款款情深</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1400430/" target="_blank">生活赋</a></li>
+                <li> <a href="http://www.sanwen8.cn/subject/1400424/" target="_blank">春风十里</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth">
+        	<h5>友情链接</h5>
+            <ul class="footer_link">
+            	<li><a href="http://www.jiangjie.date">蒋杰主页</a></li>
+                <li><a href="http://www.cdut.edu.cn">成都理工大学</a></li>
+            		<li><a href="http://www.aao.cdut.edu.cn">成都理工大学教务处</a></li>
+                <li><a href="http://www.cist.cdut.edu.cn">成都理工大学信息科学与技术学院</a></li>
+                <li><a href="mailto:1126651826@qq.com">写给版主</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth last_box">
+        	<h5>联系方式</h5>
+            <ul class="footer_link">
+            		<li><a href="#" class="qq social">1126651826</a></li>
+                <li><a href="#" class="weixin social">1126651826@qq.com</a></li>
+                <li><a href="#" class="sinaweibo social">J-蒋杰</a></li>
+                
+			</ul>
+        </div>
+        <div class="cleaner"></div>
+    </div>
+    -->
+    <div id="footer">
+    	Copyright © 2048 My Homepage Name | Designed by <a href="http://www.jiangjie.date" target="_parent">蒋杰主页</a>
+    </div>
+</div>
+
+
+</body>
+</html>

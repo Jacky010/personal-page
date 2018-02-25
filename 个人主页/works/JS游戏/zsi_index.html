@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>掷骰子</title>
+	</head>
+	<body>
+		<center>
+			<canvas id="myCanvas" width="400" height="300" style="background: #eee;border: 1px solid #ccc;"></canvas>
+			<br /><button onclick="throwdice();">掷骰子</button>
+			<article>
+				游戏规则：单击按钮开始掷骰子，每次有两个骰子分别随机给出不同的点数，
+				<br />当两个骰子的点数相加大于6时，显示“大”，当个骰子的点数相加小于6时，显示“小”,当两个骰子的点数相加等于6时，则显示“重新掷”。
+			</article>
+		</center>
+		
+		<script type="text/javascript">
+			var cwidth=400;//场景的宽
+			var cheight=300;//场景的高
+			var dicex=50;//骰子的左边界
+			var dicey=50;//骰子的右边界
+			var dicewidth=100;//骰子的宽
+			var diceheight=100;//骰子的高
+			var dotrad=8;//骰子内的点的半径
+			var cxt;//画布
+			var dx;
+			var dy;
+			//生成两个骰子的大小并给出结果
+			function throwdice(){
+				var dice1=1+Math.floor(Math.random()*6);//小于等于6的随机数
+				dx=dicex;//定位第一个骰子的左边界
+				dy=dicey;//定位骰子的顶边界
+				drawdice(dice1);//依据点数ch0画第一个骰子
+				dx=dicex+150;//计算得到第二个骰子的左边界
+				var dice2=1+Math.floor(Math.random()*6);//得到第二个骰子的点数
+				drawdice(dice2);//依据点数ch0画第二个骰子
+				if(dice1+dice2>6){//如果点数和大于6显示大
+					window.alert("大！");
+				}
+				else if (dice1+dice2<6) {//如果点数和小于6显示小
+					window.alert("小！");
+				}
+				else{//如果点数和等于6显示重掷
+					window.alert("重新再掷一次！");
+				}
+			}
+			//依据点数画骰子
+			function drawdice(n){
+				var dotx;
+				var doty;
+				cxt=document.getElementById("myCanvas").getContext("2d");//取场景
+				cxt.lineWidth=5;
+				cxt.clearRect(dx,dy,dicewidth,diceheight);//初始化骰子的位置
+				cxt.strokeRect(dx,dy,dicewidth,diceheight);//画骰子的边框
+				cxt.fillStyle="#ff0000";
+				switch (n){
+					case 1:{
+						dotx=dx+.5*dicewidth;
+						doty=dy+.5*diceheight;
+						drawdot(dotx,doty);
+						break;
+					}
+					case 2:{
+						dotx=dx+3*dotrad;
+						doty=dy+3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+dicewidth-3*dotrad;
+						doty=dy+diceheight-3*dotrad;
+						drawdot(dotx,doty);
+						break;
+					}
+					case 3:{
+						dotx=dx+3*dotrad;
+						doty=dy+3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+.5*dicewidth;
+						doty=dy+.5*diceheight;
+						drawdot(dotx,doty);
+						dotx=dx+dicewidth-3*dotrad;
+						doty=dy+diceheight-3*dotrad;
+						drawdot(dotx,doty);
+						break;
+					}
+					case 4:{
+						dotx=dx+3*dotrad;
+						doty=dy+3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+dicewidth-3*dotrad;
+						doty=dy+diceheight-3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+3*dotrad;
+						doty=dy+diceheight-3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+dicewidth-3*dotrad;
+						doty=dy+3*dotrad;
+						drawdot(dotx,doty);
+						break;
+					}
+					case 5:{
+						dotx=dx+.5*dicewidth;
+						doty=dy+.5*diceheight;
+						drawdot(dotx,doty);
+						dotx=dx+3*dotrad;
+						doty=dy+3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+dicewidth-3*dotrad;
+						doty=dy+diceheight-3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+3*dotrad;
+						doty=dy+diceheight-3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+dicewidth-3*dotrad;
+						doty=dy+3*dotrad;
+						drawdot(dotx,doty);
+						break;
+					}
+					case 6:{
+						dotx=dx+3*dotrad;
+						doty=dy+3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+dicewidth-3*dotrad;
+						doty=dy+diceheight-3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+3*dotrad;
+						doty=dy+diceheight-3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+dicewidth-3*dotrad;
+						doty=dy+3*dotrad;
+						drawdot(dotx,doty);
+						dotx=dx+3*dotrad;
+						doty=dy+.5*diceheight;
+						drawdot(dotx,doty);
+						dotx=dx+dicewidth-3*dotrad;
+						doty=dy+.5*diceheight;
+						drawdot(dotx,doty);
+						break;
+					}
+				}
+			}
+			//依据x,y坐标画出圆点
+			function drawdot(dotx,doty){
+				cxt.beginPath();
+				cxt.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				cxt.closePath();
+				cxt.fill();
+			}
+		</script>
+	</body>
+</html>

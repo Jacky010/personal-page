@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>网页特效</title>
+		<meta name="keywords" content="蒋杰，蒋杰个人主页，网页特效，个人主页，个人博客，个人作品" />
+		<meta name="description" content="蒋杰个人主页，是专门为蒋杰个人所建设的个人展示平台，采用前后端开发知识，一边学习，一边创作！" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			.reveal-modal-bg {
+				position: fixed;
+				height: 100%;
+				width: 100%;
+				z-index: 100;
+				display: none;
+				top: 0;
+				left: 0;
+				background: rgba(00, 00, 00, 0.8)
+			}
+			
+			.reveal-modal {
+				visibility: hidden;
+				top: 150px;
+				left: 50%;
+				margin-left: -300px;
+				width: 520px;
+				position: absolute;
+				z-index: 101;
+				padding: 30px 40px 34px;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+				-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+				-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+				-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+				background-color: #fff;
+			}
+			
+			.reveal-modal.small {
+				width: 200px;
+				margin-left: -140px;
+			}
+			
+			.reveal-modal.medium {
+				width: 400px;
+				margin-left: -240px;
+			}
+			
+			.reveal-modal.large {
+				width: 600px;
+				margin-left: -340px;
+			}
+			
+			.reveal-modal.xlarge {
+				width: 800px;
+				margin-left: -440px;
+			}
+			.reveal-modal p{
+				color:#000;
+			}
+			
+			.reveal-modal p a{
+				color:#000;
+			}
+			.reveal-modal .close-reveal-modal {
+				font-size: 22px;
+				line-height: 0.5;
+				position: absolute;
+				top: 8px;
+				right: 11px;
+				color: #333;
+				text-shadow: 0 -1px 1px rbga(0, 0, 0, .6);
+				font-weight: bold;
+				cursor: pointer;
+			}
+			
+		</style>
+		<script language="javascript" type="text/javascript">
+			function clearText(field) {
+
+				if(field.defaultValue == field.value) field.value = '';
+				else if(field.value == '') field.value = field.defaultValue;
+
+			}
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/ddsmoothmenu.js">
+		</script>
+
+		<script type="text/javascript">
+			ddsmoothmenu.init({
+				mainmenuid: "menu", //menu DIV id
+				orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+				classname: 'ddsmoothmenu', //class added to menu's outer DIV
+				//customtheme: ["#1c5a80", "#18374a"],
+				contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+			})
+		</script>
+
+		<!--////// CHOOSE ONE OF THE 3 PIROBOX STYLES  \\\\\\\-->
+		<link href="css_pirobox/white/style.css" media="screen" title="shadow" rel="stylesheet" type="text/css" />
+
+		<script src="http://www.jq22.com/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="wrapper">
+			<div id="header">
+				<div id="site_title">
+					<h1><a href="http://www.jiangjie.date">蒋杰主页</a></h1></div>
+				<div class="cleaner"></div>
+			</div>
+			<!-- end of header -->
+			<div id="menu" class="ddsmoothmenu">
+				<ul>
+					<li>
+						<a href="index.html">主页</a>
+					</li>
+					<li>
+						<a href="info.html">个人简介</a>
+						<ul>
+							<li>
+								<a href="resume.html">个人简历</a>
+							</li>
+
+						</ul>
+					</li>
+					<li>
+						<a href="myworks.html" class="selected">个人作品</a>
+						<ul>
+							<li>
+								<a href="web_designs.html">网页设计</a>
+							</li>
+							<li>
+								<a href="web_effects.html">网页特效</a>
+							</li>
+							<li>
+								<a href="js_games.html">JS游戏</a>
+							</li>
+							<li>
+								<a href="php_works.html">PHP作品</a>
+							</li>
+
+						</ul>
+					</li>
+					<li>
+						<a href="blog.html">博客</a>
+					</li>
+					<li>
+						<a href="contact.html">联系我们</a>
+					</li>
+				</ul>
+				<div id="search_box">
+					<form action="#" method="get">
+						<input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+						<input type="submit" name="Search" value="" id="searchbutton" title="Search" />
+					</form>
+				</div>
+				<br style="clear: left" />
+			</div>
+			<!-- end of menu -->
+
+			<div id="main">
+				<div class="gallery_box">
+					<h2>网页特效</h2>
+					<ul class="gallery">
+						<li>
+							<a class="big-link" data-reveal-id="myModal0" data-animation="fade"><img src="works/网页特效/3D爱心/images/love.png" alt="Image 01" /></a>
+							<div id="myModal0" class="reveal-modal">
+								<h1>3D爱心</h1>
+								<p >3D爱心兼星星特效采用HTML5,CSS3,JS,Canvas开发而成,页面中含有背景音乐。<a  href="works/网页特效/3D爱心/index.html" target="_blank">请点击查看</a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal1" data-animation="fade"><img src="works/网页特效/焦点图片轮换/images/index.png" alt="Image 02" /></a>
+							<div id="myModal1" class="reveal-modal">
+								<h1>网页轮播</h1>
+								<p >纯CSS实现轮播焦点图。<a  href="works/网页特效/焦点图片轮换/index.html" target="_blank">请点击查看</a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal2" data-animation="fade"><img src="works/网页特效/下拉导航/images/index.png" alt="Image 03" /></a>
+							<div id="myModal2" class="reveal-modal">
+								<h1>下拉导航条</h1>
+								<p >纯CSS实现灰白色主题下拉导航条。<a  href="works/网页特效/下拉导航/index.html" target="_blank">请点击查看</a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="works/网页特效/星星特效/index.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>星星特效</h1>
+								<p >运用技术：CSS3,Javascript,Canvas<a  href="works/网页特效/星星特效/index.html">请点击查看</a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal4" data-animation="fade"><img src="works/网页特效/新年贺卡/index.png" alt="Image 04" /></a>
+							<div id="myModal4" class="reveal-modal">
+								<h1>新年贺卡</h1>
+								<p >运用技术：HTML5,CSS3,JS(新年贺卡是展示在移动端的作品，当点击查看时请使用浏览器的F2进行查看。) <a  href="works/网页特效/新年贺卡/index.html" target="_blank">请点击查看</a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						<li>
+							<a class="big-link" data-reveal-id="myModal3" data-animation="fade"><img src="images/gallery/update.png" alt="Image 04" /></a>
+							<div id="myModal3" class="reveal-modal">
+								<h1>敬请期待</h1>
+								<p >敬请期待.....<a  href="#" target="_blank"></a></p>
+								<a class="close-reveal-modal">&#215;</a>
+							</div>
+						</li>
+						
+					</ul>
+					
+				</div>
+				<div class="cleaner"></div>
+			</div>
+
+			<!--<div id="bottom">
+    	<div class="col one_fourth">
+        	<h5>书籍推荐</h5>
+            <ul class="footer_link">
+            		<li><a href="http://baike.baidu.com/link?url=G1WVMqHAXZBVXdDku_dlL4GBDaEqtFDHhNcSCY6AFx8S716CZQySaOxdW7f627Z8UyI9sx5b7NZmDuSf7HiutG1cRtaRPEQnjuhuKsBsmY_Mb66j43PDG5NUp9PaXL18A0JG_kj3LcTTAiyn5jlKotMRabJVz177P56th7FA_aC" target="_blank">《HTML5与CSS3权威指南》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=NJLmMviV7a33yJCJx6jOI2tswZRqm9rC1hdKTW5DvFYu8gdSothy04cM4nbIuiLF1iJek9Nx4c1OkLyyEIOPRW3X-qbCE014bFASmtL2zv8I6ONvdfqWDdTM3dq59IW1gx1o1qISdLxCgwT01URD7q" target="_blank">《JavaScript设计模式》</a></li>
+                <li><a href="https://book.douban.com/subject/25823709/" target="_blank">《JQuery技术内幕》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=rKFlF_-cfBdCzoRS2RDC3eAQskxXBVnWoPUFJ56jHTbg_Rv2puansOhITdj5fBlC7i-hoDGrIkaFJX2-KI5RiipeRoQmczu5dpMXdn29x0Bx9uRJ0bLwKzbBqlkuCM7cRkzwjGzeVpVQWuzY7IMnjtpXu0aHAM4juA97P6clYUe" target="_blank">《JavaScript面向对象精要》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=KPiGp_bM1vmchS8uNSO6qEk4qGwrt6LpsK5Ak2niGXoCBTPbM8L5-_9x1W8QDcrSbTRXkKKvUsdX4M6PRiMQyM9pQblATIaG_r9aVFWjPuO3baV6P7MNWs4nShcHxfdQJGWBl_6Z2FB3MxXc27RMV-vSdeQ2LIsF_Uh2WyqYzYeUeNN2ibs27oJXnsqXq3_H#1" target="_blank">《Ajax经典案例开发大全》</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth">
+        	<h5>美文赏析</h5>
+            <ul class="footer_link">
+            		<li><a href="http://www.sanwen8.cn/subject/1401511/" target="_blank">采一笔清风流云，入眉</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1401317/" target="_blank">携一斛春色，沉醉</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1401238/" target="_blank">三月烟花，款款情深</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1400430/" target="_blank">生活赋</a></li>
+                <li> <a href="http://www.sanwen8.cn/subject/1400424/" target="_blank">春风十里</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth">
+        	<h5>友情链接</h5>
+            <ul class="footer_link">
+            	<li><a href="http://www.jiangjie.date">蒋杰主页</a></li>
+                <li><a href="http://www.cdut.edu.cn">成都理工大学</a></li>
+            		<li><a href="http://www.aao.cdut.edu.cn">成都理工大学教务处</a></li>
+                <li><a href="http://www.cist.cdut.edu.cn">成都理工大学信息科学与技术学院</a></li>
+                <li><a href="mailto:1126651826@qq.com">写给版主</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth last_box">
+        	<h5>联系方式</h5>
+            <ul class="footer_link">
+            		<li><a href="#" class="qq social">1126651826</a></li>
+                <li><a href="#" class="weixin social">1126651826@qq.com</a></li>
+                <li><a href="#" class="sinaweibo social">J-蒋杰</a></li>
+                
+			</ul>
+        </div>
+        <div class="cleaner"></div>
+    </div>
+    -->
+			<div id="footer">
+				Copyright © 2048 My Homepage Name | Designed by
+				<a href="http://www.jiangjie.date" target="_parent">蒋杰主页</a>
+			</div>
+		</div>
+	</body>
+
+</html>

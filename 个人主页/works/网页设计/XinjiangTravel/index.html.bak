@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="index.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新疆旅游网</title>
+</head>
+
+<body>
+<div id="htt">
+		<div id="qb">
+            <div id="qbb"></div>
+            <!--头-->
+        	<div id="tb">
+           	  <div class="tb1"></div>
+
+           	  <!--欢迎加语言部分-->
+                <div class="tb2">
+                <div class="tbbox">欢迎来到新疆旅游官方网站！</div>
+                		<div class="xial">
+<div id="lbx">
+<div class="an abs">
+    <div id="anb">
+    	<div id="ann"><a href="#">language</a></div>
+    	<img class="down abs" src="img/up.bmp" />
+    	<img class="up abs" src="img/down.bmp" />
+    </div>
+</div>
+    <div class="lanlb abs"><a href="#">英语</a></div>
+    <div class="lanlb abs"><a href="#">日语</a></div>
+    <div class="lanlb abs"><a href="#">鳄鱼</a></div>
+    <div class="lanlb abs"><a href="#">法语</a></div>
+    <div class="lanlb abs"><a href="#">韩语</a></div>
+    <div class="dis"></div>
+</div>
+<script src="jquery.js"></script>
+<script type="text/javascript" src="xiala.js" language="javascript" charset="gbk"></script>
+                
+                		</div>
+              </div>
+                <!--导航部分-->
+              <div id="daohang">
+                	<div class="shouye"><a href="#">首页</a></div>
+                    <div class="dhl"><a href="#">新疆简介</a></div>
+                    <div class="dhl"><a href="#">目的地指南</a></div>
+                    <div class="dhl"><a href="#">必游景点</a></div>
+                    <div class="dhl"><a href="#">主题体验</a></div>
+                    <div class="dhl"><a href="#">节日盛事</a></div>
+                    <div class="dhl"><a href="#">旅游计划</a></div>
+                </div>
+                
+            </div>
+            
+           <!--轮播图部分-->
+           		<div id="lbbb">
+<div id="rebox">
+	<div class="imgboxx">
+	<a href="#" class="imgbox"><img src="img/flash1/banner1.jpg" /></a>
+    <a href="#" class="imgbox"><img src="img/flash1/banner2.jpg" /></a>
+    <a href="#" class="imgbox"><img src="img/flash1/banner3.jpg" /></a>
+    <a href="#" class="imgbox"><img src="img/flash1/banner4.jpg" /></a>
+    <a href="#" class="imgbox"><img src="img/flash1/banner5.jpg" /></a>
+    <a href="#" class="imgbox"><img src="img/flash1/banner6.jpg" /></a>
+    </div>
+    <div class="rean"> 
+    	<div class="reann abbx"></div>
+        <div class="reann"></div>
+        <div class="reann"></div>
+        <div class="reann"></div>
+        <div class="reann"></div>
+        <div class="reann"></div>
+    </div>
+
+</div>
+<script src="jquery.js"></script>
+<script src="rebox.js"></script>  
+                
+               		</div>
+           <!--结束-->
+           <!--滚动图部分！-->
+           <div id="gdt">
+<div id="zy">
+  <div id="zytb"></div>
+  <div class="zyleft"><img src="img/left.bmp"></div>
+  <div class="zybox">
+   	<div class="zydemo">
+    	  <div class="zytxbox">
+          <div class="messagebox">
+          <div class="messagebox2"><a href="#"><img src="img/flash2/flashx1.jpg"></a></div>
+          <div class="messagebox3"><b><a href="#">探险新疆</a></b><br/><br/>如果你想要去探险，新疆是一个理想之地，绝对不能错过......<br/><a href="#">Details</a></div>
+          </div>
+          </div>
+          
+          <div class="zytxbox">
+          <div class="messagebox">
+          <div class="messagebox2"><a href="#"><img src="img/flash2/flashx2.jpg"></a></div>
+          <div class="messagebox3"><b><a href="#">早期探险家</a></b><br/><br/>The Age of Discovery marked a new period in the World history. Travelers of the world discover...  
+<br/><a href="#">Details</a></div>
+          </div>
+          </div>
+          
+          <div class="zytxbox">
+          <div class="messagebox">
+          <div class="messagebox2"><a href="#"><img src="img/flash2/flashx3.jpg"></a></div>
+          <div class="messagebox3"><b><a href="#">Xinjiang Music</a></b><br/><br/>新疆维吾尔族用独特的歌曲表演了一个丰富多彩而生动的文化节目......
+<br/><a href="#">Details</a></div>
+          </div>
+          </div>
+          
+          <div class="zytxbox">
+          <div class="messagebox">
+          <div class="messagebox2"><a href="#"><img src="img/flash2/flashx4.jpg"></a></div>
+          <div class="messagebox3"><b><a href="#">Xinjiang Shopping</a></b><br/><br/>在新疆购物中心，您可以买到新疆维吾尔族各式各样、琳琅满目的商品...
+<br/><a href="#">Details</a></div>
+          </div>
+          </div>
+          
+          <div class="zytxbox">
+          <div class="messagebox">
+          <div class="messagebox2"><a href="#"><img src="img/flash2/flashx5.jpg"></a></div>
+          <div class="messagebox3"><b><a href="#">Xinjiang Cuisine</a></b><br/><br/>新疆是一个多民族聚居地、多种文化交汇的地区......
+<br/><a href="#">Details</a></div>
+          </div>
+          </div>
+          
+          <div class="zytxbox">
+          <div class="messagebox">
+          <div class="messagebox2"><a href="#"><img src="img/flash2/flashx6.jpg"></a></div>
+          <div class="messagebox3"><b><a href="#">Eco & Natrue</a></b><br/><br/>新疆具有独特的民族魅力和丰富的自然遗产......<br/><a href="#">Details</a></div>
+          </div>
+          </div>
+       </div>
+        
+        
+  </div>    
+  <div class="zyright"><img src="img/right.bmp"></div>
+</div>
+<script src="../../jquery.js"></script>
+<script src="zy.js"></script>
+           		           
+           </div>
+           <!--结束-->
+           
+           <!--景色特点部分！-->
+           <div id="jstd">
+           		<div id="jstbl">
+                	<div class="jstbl1"></div>
+                  <div class="jstbl2">
+                   	<div class="jstblbox">
+                        	<div class="jstbimg">
+                            	<div class="jstbtex"><a href="#">Tuyugou Canyon</a></div>
+                            </div>
+                            <p class="jstbtex2"><a href="#">吐峪沟的麻扎村......</a></p>
+                      </div>
+                      <div class="jstblbox">
+                        	<div class="jstbimg">
+                            	<div class="jstbtex"><a href="#">艾提尕尔清真寺</a></div>
+                            </div>
+                            <p class="jstbtex2"><a href="#">喀什是一个大型的穆斯林城市...</a></p>
+                      </div>
+                      <div class="jstblbox">
+                        	<div class="jstbimg">
+                            	<div class="jstbtex"><a href="#">Kanas Lake</a></div>
+                            </div>
+                            <p class="jstbtex2"><a href="#">喀纳斯是国家级自然保护区......</a></p>
+                      </div>
+                      <div class="jstblbox">
+                        	<div class="jstbimg">
+                            	<div class="jstbtex"><a href="#">Heavenly Lake</a></div>
+                            </div>
+                            <p class="jstbtex2"><a href="#">天池位于天山国家公园......</a></p>
+                      </div>
+                      <div class="jstblbox">
+                        	<div class="jstbimg">
+                            	<div class="jstbtex"><a href="#">Kashgar bazaar</a></div>
+                            </div>
+                            <p class="jstbtex2"><a href="#">喀什是一个东西方文化...</a></p>
+                      </div>
+                      <div class="jstblbox">
+                        	<div class="jstbimg">
+                            	<div class="jstbtex"><a href="#">Tuwa village</a></div>
+                            </div>
+                            <p class="jstbtex2"><a href="#">它在阿尔泰山脉的深处......</a></p>
+                      </div>
+                  </div>
+                	
+                </div>
+                
+                
+             <div id="jstbr">
+                		<div class="jstbrtop">
+                        	<P>欢迎您到新疆来!<br/><br/>
+							<span class="jstbrhy">Xinjiang is famous for being “the land<br/>of
+							song and dance”, “the land of<br/>fruits”,“the land of precious stones”.<br/> Xinjiang is one of themost attractive<br/>regions for travelers. </span></P>
+                     	<div class="ltt"><img src="img/lt.bmp" /><a href="#">...了解更多</a></div>
+                     </div>
+                     <div class="jstbrbot">
+                     	<div class="jstbbotu"></div>
+                        <div class="jstlbt">
+                        
+<div id="ullb">
+	<div id="ullbdemo">
+    	<div id="ullbdemo1">
+            <a href="#">·2013上半年新疆入境旅游人数激增...</a><br/>
+			<a href="#">·新疆旅游业的蓬勃发展和古丝绸之路的...</a><br/>
+			<a href="#">·新疆天山被列入世界遗产...</a><br/>
+			<a href="#">· Invitation Letter on Participation ...</a><br/>
+			<a href="#">·新疆旅游购物市场依然火爆...</a><br/> 
+        </div>
+    	<div id="ullbcopy">
+    	</div>
+    </div>
+</div>
+<script src="jquery.js"></script>
+<script src="ullb.js"></script>
+
+			</div>
+                     </div>
+                </div>
+                
+                
+           </div>
+           
+           <!--结束！-->
+           <!--框架部分-->
+           <div id="kuangjia">
+           		<div id="kuangjia1">
+
+<div id="kj">
+	<div id="kja">
+    	<div class="kjb">
+    	<div class="kjann chcol"><a href="#">新疆旅游</a></div>
+        <div class="kjann"><a href="#">丝绸之路</a></div>
+        <div class="kjann"><a href="#">Hotels</a></div>
+        <div class="kjann"><a href="#">租车</a></div>
+        <div class="kjann"><a href="#">导游</a></div>
+        </div>
+        <div class="llj"></div>
+    </div>
+    <div class="kjdemo">
+    <div class="kjc">
+    	<div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/ly/ly1.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">乌鲁木齐—喀纳斯2日游</span></a><br/><br/>喀纳斯湖自然保护区，一个景色迷人的地方，这里有宁静的河谷，多样的物种、丰美的草场、绿色针叶林、神秘的高山湖泊和壮丽的冰川。<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/ly/ly2.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">新疆南部丝绸之路11日游</span></a><br/><br/>乌鲁木齐、吐鲁番、库尔勒、喀什和阿克苏这些城市都是拥有美丽的自然风光和引人入胜的历史故事的地方。在这里你将得到放松和休息，从这里开启您的丝路之旅吧。<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/ly/ly3.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">乌鲁木齐、喀什和吐鲁番6日游</span></a><br/><br/>到新疆乌鲁木齐、吐鲁番、喀什3个在历史、文化和自然景观最著名的城市旅游将是您的一次难忘的旅行。<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/ly/ly4.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">乌鲁木齐、吐鲁番、哈密5日游</span></a><br/><br/>想了解新疆少数民族，参观新疆博物馆，欣赏迷人的湖泊，感受古老的城市或者品味香甜的哈密瓜？还在苦恼选什么旅行社吗？加入这个团就可以同时体验以上所有！<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+    </div>
+    
+    <div class="kjc">
+    	<div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/sc/sc1.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">马可波罗之旅</span></a><br/><br/>激动人心的11个城市丝路之旅,你将会像马可波罗一样，从西向东横穿中国,探索和了解中国，并体会是什么魔力使得它如此独特和具有吸引力！<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/sc/sc2.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">丝绸之路13日游</span></a><br/><br/>这是中国最有名的城市之旅，探索自然、风景、历史和民族。中国是一个多样化的国家，是一个神秘、迷人的国度，它使你惊奇，并且深深爱上这里！<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/sc/sc3.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">乌鲁木齐 - 吐鲁番 - 敦煌 - 西安7日游</span></a><br/><br/>西安和新疆的许多城市是神秘的丝绸之路的重点。这些城市都有很多的文化和历史景点。而西安的庄严、雄伟被很好的保存了下来。<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/sc/sc4.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">丝绸之路9日游 - 西安，敦煌，吐鲁番，喀什和乌鲁木齐</span></a><br/><br/>西安城墙，兵马俑，莫高窟，鸣沙山山，高昌故城，阿斯塔纳古墓，柏孜克里克千佛洞石窟，交河故城，坎儿井，伊明尖塔，卡拉库里湖，香妃墓，天池，新疆博物馆。<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+    </div>
+    
+    <div class="kjc">
+    	<div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/hotels/ho1.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">Garden Hotel - Korla (5 star)</span></a><br/><br/>City:   Korla<br/>地址：新疆库尔勒滨河路20号<br/>Tel:   86-996-2066666<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/hotels/ho2.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">丝绸之路13日游</span></a><br/><br/>City:   Kashgar<br/>地址：新疆喀什建设路160号，中国844000<br/>Tel:    (86-998)2655555<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/hotels/ho3.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">乌鲁木齐 - 吐鲁番 - 敦煌 - 西安7日游</span></a><br/><br/>City:   Urumqi<br/>地址：新疆烏魯木齊新華北路305號，中國830002<br/>Tel:    (86-991)2937888<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/hotels/ho4.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">丝绸之路9日游 - 西安，敦煌，吐鲁番，喀什和乌鲁木齐</span></a><br/><br/>City:   Urumqi<br/>地址：新疆乌鲁木齐西喜红路179号，中国830000<br/>Tel:    86-991-4536688<br/><a href="#"><span class="kjcab">了解更多>></span></a></div>
+        </div>
+    </div>
+    
+    <div class="kjc">
+    	<div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/zc/zc1.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">Landwind X8</span></a><br/><br/>座位数：5座<br/>适合3人</div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/zc/zc2.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">瑞风 VAN</span></a><br/><br/>座位数：5座<br/>适合3人</div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/zc/zc3.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">海狮 VAN</span></a><br/><br/>座位数：5座<br/>适合3人</div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/zc/zc4.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">捷克 VAN</span></a><br/><br/>座位数：5座<br/>适合3人</div>
+        </div>
+    </div>
+    
+        <div class="kjc">
+    	<div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/dy/dy1.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">Mahmud</span></a><br/><br/>您好！我的名字是 Mahmud，在中青旅工作。热烈欢迎大家来到我的家乡吐鲁番！新疆是中国最大的省份，历史悠久，丰富多彩的文化，有趣的... ... </div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/dy/dy2.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">Nisagul</span></a><br/><br/>欢迎来到新疆！我的名字是Nisagul，寓意是像花儿一样漂亮的女子。我的家乡在新疆乌鲁木齐。我非常荣幸能够成为你们的导游，并能够向您介绍我的家乡... </div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/dy/dy3.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">Parhat</span></a><br/><br/>女士们，先生们，我非常荣幸地欢迎您来到这片美丽的土地！我们有令人流连忘返的风景，美味的食物，各式各样活动和热心肠的人。此外，您... </div>
+        </div>
+        <div class="kjca">
+        	<div class="kjcb"><img src="img/kuangjia/dy/dy4.jpg" /></div>
+            <div class="kjcc"><a href="#"><span class="kjcaa">Rena</span></a><br/><br/>亲爱的朋友們！我很高兴的在新疆迎接您！用新疆歌​​曲和舞蹈，树林和沙漠，在宁静的草原上喂养的马匹在和甜葡萄的土地熟化... </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+<script src="jquery.js"></script>
+<script src="kj.js"></script>
+                </div>
+                <div id="kuangjia2">
+                	<div class="kujia2img"><img src="img/gg/ad1.jpg" /></div>
+                    <div class="kujia2img"><img src="img/gg/ad2.png" /></div>
+                    <div class="kujia3img"><img src="img/gg/ad3.jpg" /></div>
+                </div>
+           </div>
+           <!--结束！-->
+           <!--视频部分！-->
+          <div id="vediof">
+          		<video width="990" height="500" controls="controls" autoplay="autoplay">
+  					<source src="img/vedio/hello.mp4" type="video/mp4" />
+				</video>
+          </div>
+          <!--结束！-->
+          
+          <div id="fk">
+          		<div id="fkle">
+          		<div id="fktop">请发送邮件以获取新疆或丝绸之路产品计划！</div>
+          		<div id="fkbut">
+                	<select class="sele">
+                    	<option>Ms.</option>
+                        <option>Mrs.</option>
+                    </select>
+                    <input class="selel" type="text" value="输入您的姓名" />
+                    <input class="selel" type="text" value="输入您的E-mail" />
+                	<input class="selec" type="submit" value="提交">
+                </div>
+                </div>
+                <div id="fkre"></div>
+          </div>
+          
+          <div id="foott">
+          <div class="asdasd">
+          	 <a href="#">关于我们丨</a>
+          	 <a href="#">联系我们丨</a>
+             <a href="#">友情链接丨</a>
+             <a href="#">Site Map</a><br/>
+          2016.7.1 技术支持：<a href="#">@Jacky</a>
+
+  		  </div>
+          <div id="zztj">
+          		<img class="zztjj" src="img/zztjj.bmp" />
+                <img class="zztjj" src="img/zztjj1.bmp" />
+          </div>
+          </div>
+	</div>
+    <div id="qbqb"></div>
+</div>
+<script src="zztj.js"></script>
+<script src="zztjjj.js"></script>
+</body>
+</html>

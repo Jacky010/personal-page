@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<!-- 容器开始 -->
+<div class="container">
+    <h1>我的Todo</h1>
+    <!-- 添加任务开始 -->
+    <form class="add-task">
+        <input name="content"
+               type="text"
+               placeholder="请输入备忘录任务...."
+               autofocus
+               autocomplete="off"
+        >
+        <button type="submit">submit</button>
+    </form>
+    <!-- 添加任务结束 -->
+
+    <!-- 任务清单列表开始 -->
+    <div class="task-list">
+        <!-- 任务清单开始 -->
+        <!--<div class="task-item">
+            <span><input type="checkbox"></span>
+            <span class="item-content">item content 1</span>
+            <span>delete</span>
+            <span>detail</span>
+        </div>-->
+        <!-- 任务清单结束 -->
+    </div>
+    <!-- 任务清单列表结束 -->
+
+    <!-- 任务详情开始 -->
+    <div class="task-detail-mask"></div>
+    <div class="task-detail">
+        <!-- 任务标题开始 -->
+        <!--<div class="content">
+            下午记得买菜
+        </div>
+        &lt;!&ndash; 任务标题结束 &ndash;&gt;
+
+        &lt;!&ndash; 任务描述开始 &ndash;&gt;
+        <div>
+            <div class="desc">
+                <textarea name="" id="" ></textarea>
+            </div>
+        </div>
+        &lt;!&ndash; 任务描述结束 &ndash;&gt;
+        &lt;!&ndash; 任务定时提醒开始 &ndash;&gt;
+        <div class="remind">
+            <input type="date">
+            &lt;!&ndash;<button type="submit">submit</button>&ndash;&gt;
+        </div>
+        &lt;!&ndash; 任务定时提醒结束 &ndash;&gt;-->
+    </div>
+    <!-- 任务详情结束 -->
+</div>
+<!-- 容器结束 -->
+<video class="alerter" src="alert.mp3"></video>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js"></script>
+<script src="node_modules/store/store.js"></script>
+<script src="js/base.js"></script>
+</body>
+</html>

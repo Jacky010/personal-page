@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="css/style1.css"  />
+<link type="text/css" rel="stylesheet" href="css/main1.css"  />
+<title>产品列表页</title>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript" src="js/ie6Fixpng.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+	var index = 0;
+	$('div.btn ul li').hover(function(){
+	var index = $(this).index();
+	$(this).addClass('on').siblings().removeClass('on');
+	$('div.imgbox img').eq(index).stop(true).fadeIn().siblings().stop(true).fadeOut();
+	},function(){});
+				
+	var play = setInterval(auto,2000);
+	$('bannerbox' ).hover(function(){
+	clearInterval( play );
+				},function(){
+					play = setInterval(auto,2000);
+				});
+				function auto(){
+					index++;
+					index %=4;
+					$('div.btn ul li').eq(index).addClass('on').siblings().removeClass('on');
+					$('div.imgbox img').eq(index).stop(true).fadeIn().siblings().stop(true).fadeOut();
+				}
+			});
+</script>  
+</head>
+
+<body>
+<div class="header">
+	<div class="top">
+    	<div class="comWidth">
+        	<div class="leftbox">
+            	<a href="#"  class="collection">收藏主页</a>
+            </div>
+            <div class="rightbox">
+            	欢迎来到Jacky商城！<a href="#">[登录]</a><a href="#">[免费注册]</a>
+            </div>
+        </div>
+    </div>
+    <!--top结束-->
+    
+    <div class="logo">
+    	<div class="comWidth">
+            <div class="logobox fl">
+                <a href="#"><img src="images/logo.gif" alt="Logo" /></a>
+            </div>
+            <div class="search fl">
+                <input type="text" class="search_txt fl" />
+                <input type="button" class="search_btn fr" value="搜 索" />        	</div>
+            <div class="shopCar fr">
+                <span class="shop fl">购物车</span>
+                <span class="shopNum fl">0</span>
+            </div>
+        </div>
+    </div>
+    <!--logo结束-->
+    <div class="nav">
+    	<div class="comWidth">
+        	<div class="shopClass fl">
+            	<h3>全部商品分类<i></i></h3>
+                <div class="listshow ">
+                	<dl class="list_item">
+                    	<dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="links">合约机</a></dt>
+                        <dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
+                    </dl>
+                    <dl class="list_item">
+                    	<dt><a href="#" class="b">电脑</a> <a href="#" class="b">硬件外设</a> <a href="#" class="links c">装机宝</a></dt>
+                        <dd><a href="#">笔记本</a> <a href="#">台式机</a> <a href="#">超极本</a> <a href="#">平板</a></dd>
+                    </dl>
+                    <dl class="list_item">
+                    	<dt><a href="#" class="b">大家电</a></dt>
+                        <dd><a href="#">电视</a> <a href="#">空调</a> <a href="#">冰箱</a> <a href="#">洗衣机</a></dd>
+                    </dl>
+                    <dl class="list_item">
+                    	<dt><a href="#" class="b">厨房电器</a> <a href="#" class="b">生活电器</a></dt>
+                        <dd><a href="#">空气净化器</a> <a href="#">微波炉</a> <a href="#">取暖设备</a></dd>
+                    </dl>
+                    <dl class="list_item">
+                    	<dt><a href="#" class="b">食品/饮料/生鲜</a> <a href="#" class="links c">粮油</a></dt>
+                        <dd><a href="#">进口</a> <a href="#">方便面</a> <a href="#">零食</a> <a href="#">保健</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <ul class="navList fl">
+            	<li><a href="#" class="active">数码城</a></li>
+                <li><a href="#">天猫猫</a></li>
+                <li><a href="#">团购</a></li>
+                <li><a href="#">二手交易</a></li>
+                <li><a href="#">发现</a></li>
+                <li><a href="#">名品会</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--nav结束-->
+</div>
+<!--头部结束-->
+<div class="comWidth clearfix product">
+	<div class="leftbox">
+    	<div class="leftnav">
+        	<h3 class="nav_title">手机、数码、相机</h3>
+        	<div class="nav_cont">
+            	<h3>手机通讯</h3>
+                <ul class="navCont_list clearfix">
+                	<li><a href="#">全部手机</a></li>
+                    <li><a href="#">双卡手机</a></li>
+                    <li><a href="#">老年手机</a></li>
+                    <li><a href="#">联通专区</a></li>
+                    <li><a href="#">1080P高清</a></li>
+                    <li><a href="#">拍照神器</a></li>
+                    <li><a href="#">对讲机</a></li>
+                </ul>
+        	</div>
+            <div class="nav_cont">
+            	<h3>数码相机</h3>
+                <ul class="navCont_list clearfix">
+                	<li><a href="#">卡片机</a></li>
+                    <li><a href="#">中长焦</a></li>
+                    <li><a href="#">专业便</a></li>
+                    <li><a href="#">携自拍利器</a></li>
+                    <li><a href="#">防水防摔</a></li>
+                    <li><a href="#">一次成像</a></li>
+                </ul>
+        	</div>
+            <div class="nav_cont">
+            	<h3>单反</h3>
+                <ul class="navCont_list clearfix">
+                	<li><a href="#">全部</a></li>
+                    <li><a href="#">佳能</a></li>
+                    <li><a href="#">尼康</a></li>
+                    <li><a href="#">宾得</a></li>
+                    <li><a href="#">哈苏</a></li>
+                </ul>
+        	</div>
+            <div class="nav_cont">
+            	<h3>镜头</h3>
+                <ul class="navCont_list clearfix">
+                	<li><a href="#">单反镜头</a></li>
+                    <li><a href="#">微调镜头</a></li>
+                </ul>
+        	</div>
+             <div class="nav_cont">
+            	<h3>数码存储</h3>
+                <ul class="navCont_list clearfix">
+                	<li><a href="#">刻录盘片</a></li>
+                    <li><a href="#">盘片附件</a></li>  
+                </ul>
+        	</div>
+             <div class="nav_cont">
+            	<h3>摄想配件</h3>
+                <ul class="navCont_list clearfix">
+                	<li><a href="#">相机包</a></li>
+                    <li><a href="#">相机电池</a></li>
+                    <li><a href="#">贴膜</a></li>
+                    <li><a href="#">滤镜</a></li>
+                    <li><a href="#">三角架</a></li>
+                    <li><a href="#">遥控器</a></li>
+                    <li><a href="#">专业配件</a></li>
+                    <li><a href="#">清洁用品</a></li>
+                    <li><a href="#">望远镜</a></li>
+                </ul>
+        	</div>
+            <div class="nav_cont">
+            	<h3>电子教育</h3>
+                <ul class="navCont_list clearfix">
+                	<li><a href="#">电子书</a></li>
+                    <li><a href="#">盘电子教育</a></li>
+                    <li><a href="#">幼儿教育</a></li>
+                    <li><a href="#">智能学习</a></li>
+                    <li><a href="#">录音笔</a></li>
+                </ul>
+        	</div>
+        </div>
+    </div>
+    <div class="rightbox">
+    	<div class="bannerbox">
+    	<div class="imgbox">
+    		<img src="images/banner/banner1.jpg" alt="banner1" style="display:block;"/>
+        	<img src="images/banner/banner2.jpg" alt="banner2" />
+            <img src="images/banner/banner3.jpg" alt="banner3" />
+            <img src="images/banner/banner4.jpg" alt="banner4" />
+        </div>
+        <div class="btn">
+        	<ul>
+            	<li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+    </div>
+    	<div class="h_7"></div>
+        <div class="product_title">
+        	<h3>数码影像</h3>
+        </div>
+        <div class="product_list clearfix">
+        	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/p1.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Canon 佳能 EOS 60D 单反套机</a></p>
+                    <p class="money">￥6099.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（1356条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/p2.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Sony/索尼 ILCE-6000L套机</a></p>
+                    <p class="money">￥3999.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（2126条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/p3.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Sony/索尼 DSC-H400</a></p>
+                    <p class="money">￥1699.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（06条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/p4.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Casio/卡西欧 EX-ZR2000</a></p>
+                    <p class="money">￥1579.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（26条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/p5.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Fujifilm/富士 instax mini90</a></p>
+                    <p class="money">￥1178.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（136条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/p6.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Casio/卡西欧 EX-ZR55</a></p>
+                    <p class="money">￥1699.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（156条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/p7.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Canon/佳能 EOS 760D套机</a></p>
+                    <p class="money">￥5699.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（546条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/p8.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Nikon/尼康 D7200套机</a></p>
+                    <p class="money">￥6699.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（436条）</a></p> 
+            </div>
+            </div>
+        </div>
+        <div class="h_15"></div>
+        <div class="product_title">
+        	<h3>娱乐影音</h3>
+        </div>
+        <div class="product_list clearfix">
+        	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/pp1.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">海美迪 HD600A三代 八核心</a></p>
+                    <p class="money">￥398.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（641条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/pp2.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Beats Solo2 Wireless 随身试听 3.5mm</a></p>
+                    <p class="money">￥2288.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（2500条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/pp3.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">先科512户外音响12寸大功率便携音箱</a></p>
+                    <p class="money">￥299.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（3151条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/pp4.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">hifier/屁颠虫 MC-092唱吧麦克风全民K歌</a></p>
+                    <p class="money">￥198.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（6096条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/pp5.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Beats URBEATS随身听 3.5mm</a></p>
+                    <p class="money">￥788.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（6134条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/pp6.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Edifier/漫步者 R206MP3</a></p>
+                    <p class="money">￥239.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（4009条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/pp7.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">Sony/索尼 BDV-N9200WL 5.1 音柱式 4K高清画质 无线环绕</a></p>
+                    <p class="money">￥6524.13</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（171条）</a></p> 
+            </div>
+            </div>
+                    	<div class="item">
+            <div class="item_cont">
+            	<div class="img_item">
+                	<a href="#"><img src="images/product/pp8.jpg" alt="p1" /></a>
+                </div>
+                    <p><a href="#">nuomeike DY-24L 4.0蓝牙插卡U盘收音机无损格式</a></p>
+                    <p class="money">￥198.00</p> 
+                    <p>评论:<span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><span class="stars"></span><a href="#">（2757条）</a></p> 
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="h_25"></div>
+<div class="footer">
+	<P><a href="#">商城简介</a><i>|</i><a href="#">主页公告</a><i>|</i><a href="#">知识产权</a><i>|</i><a href="#">联系我们</a><i>|</i>客服热线：100-567-1234</P>
+    <P>Copyright &copy; 2006 - 2014 蒋杰版权所有&nbsp;&nbsp;&nbsp;京ICP备09037834号&nbsp;&nbsp;&nbsp;京ICP证B1034-8373号&nbsp;&nbsp;&nbsp;某市公安局XX分局备案编号：123456789123</P>
+	<P class="footer_img"><a href="#"><img src="images/icon/footer.jpg" alt="footer" /></a><a href="#"><img src="images/icon/footer.jpg" alt="footer" /></a><a href="#"><img src="images/icon/footer.jpg" alt="footer" /></a><a href="#"><img src="images/icon/footer.jpg" alt="footer" /></a></P>
+</div>
+<!--底部结束-->
+</body>
+</html>

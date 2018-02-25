@@ -1,0 +1,201 @@
+
+
+#player {
+	width: 300px;
+	height: 300px;
+	background: #6e6e6e;
+	margin: 0 ;
+	border-radius: 8px;
+	/*box-shadow:1px 1px 7px rgba(0, 0, 0, 0.4);*/
+}
+
+audio {
+	display: none;
+}
+
+/* clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+.clearfix {
+	display: block
+}
+
+#controls {
+	height: 70px;
+}
+
+.controls div {
+	float: left;
+	width: 55px;
+	height: 57px;
+	margin: 7px 0 6px 0;
+}
+
+#play {
+	background: url(../images/ctrl.png);
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+#play:hover {
+	background: url(../images/ctrl.png) no-repeat 0 -57px;
+}
+
+#play.playing {
+	background: url(../images/ctrl.png) no-repeat -49px 0;
+}
+
+#play.playing:hover {
+	background: url(../images/ctrl.png) no-repeat -49px -57px;
+}
+
+#next {
+	background: url(../images/ctrl.png) no-repeat -98px 0;
+	cursor: pointer;
+}
+
+#next:hover {
+	background: url(../images/ctrl.png) no-repeat -98px -57px;
+}
+
+#progress {
+	width: 100px;
+	height: 20px;
+	margin: 25px 0;
+	border-radius: 3px;
+	background: #6e6e6e;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+
+#progress div {
+	width: 0;
+	height: 20px;
+	background: #6e6e6e;
+	margin: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+#progress p {
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 10px;
+	text-align: center;
+	color: #FFF;
+	font-weight: 600;
+}
+
+#volume {
+	width: 50px;
+	height: 16px;
+	margin: 27px 10px;
+	position: relative;
+	background: url(../images/vol.png) repeat-x;
+	cursor: pointer;
+}
+
+#volume div {
+	width: 14px;
+	height: 14px;
+	border: 1px solid #2A3B4C;
+	border-radius: 3px;
+	margin: 0;
+	background: #D5DEE8 url(../images/vol2.png) no-repeat;
+	position: absolute;
+	left: 34px;
+	top: 0;
+	cursor: pointer;
+}
+
+#volume div:hover {
+	background-color: #6e6e6e;
+}
+
+.bar {
+	height: 30px;
+	line-height: 30px;
+	background: #ccc;
+	padding: 0 10px;
+}
+
+.bar button {
+	margin: 5px 15px;
+}
+
+button {
+	font-size: 11px;
+	background: #e0dbdb;
+	height: 20px;
+	line-height: 16px;
+	border: 1px solid #000;
+	border-radius: 3px;
+	color: #999;
+	font-weight: 600;
+	padding: 1px 3px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #6e6e6e;
+}
+
+#musiclist {
+	height: 180px;
+	background: #f9f6f6;
+	margin: 0;
+	list-style: square;
+	padding-left: 0;
+	overflow: scroll;
+}
+
+#musiclist li {
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #222;
+	margin-bottom:0;
+	margin-top:0;
+	padding-left: 10px;
+	list-style-position: inside;
+	cursor: default;
+}
+
+#musiclist li.isplay {
+	background: #f9f6f6;
+}
+
+#musiclist li:hover {
+	background: #ccc;
+}
+
+#musiclist li.disable {
+	color: #5a5a5a;
+}
+
+#musiclist li.disable:hover {
+	background: #FFF;
+}
+
+.bottom {
+	border-radius: 0 0 8px 8px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+#mode {
+	color: #000;
+	cursor: pointer;
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>联合国常任理事国介绍</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* 轮播广告 */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+            color: black;
+        }
+
+        /* 简介 */
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 特性 */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">联合国常任理事国</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">综述</a></li>
+                <li><a href="#summary-container">简述</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">特点 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-chrome">中国</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-firefox">美国</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-safari">俄罗斯</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-opera">英国</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-ie">法国</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/china.png" style="height:500px" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>中国</h1>
+
+                    <p>中华人民共和国国旗是五星红旗，旗面为红色，长宽比例为3:2。左上方缀黄色五角星五颗，四颗小星环拱在一颗大星的右面，并各有一个角尖正对大星的中心点。</p>
+
+            
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/usa.png" style="height:500px" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>美国</h1>
+
+                    <p>美利坚合众国的国旗旗面由13道红白相间的宽条构成，左上角还有一个包含了50颗白色小五角星的蓝色长方形。50颗小星代表了美国的50个州，而13条间纹则象征着美国最早建国时的13块殖民地。</p>
+
+            
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/russia.png" style="height:500px" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>俄罗斯</h1>
+
+                    <p>俄罗斯联邦的国旗采用传统的泛斯拉夫颜色，旗面由三个平行且相等的横长方形组成，由上到下依次是白、蓝、红三色。</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/un.png" style="height:500px" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>英国</h1>
+
+                    <p>英国国旗由蓝色背景、红色“米”字构成，因此也称为“米字旗”。</p>
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/franch.png" style="height:500px" alt="5 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>法国</h1>
+
+                    <p>法国国旗是一面从左至右蓝、白、红色垂直排列的三色旗。。</p>
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- 主要内容 -->
+<div class="container summary">
+
+    <!-- 简介 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-4">
+            <img class="img-circle" src="images/z.png" alt="china">
+
+            <h2>中国</h2>
+
+            <p>中华人民共和国国旗是五星红旗，旗面为红色，长宽比例为3:2。左上方缀黄色五角星五颗，四颗小星环拱在一颗大星的右面，并各有一个角尖正对大星的中心点。</p>
+
+            
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/a.png" alt="usa">
+
+            <h2>美国</h2>
+
+            <p>美利坚合众国的国旗旗面由13道红白相间的宽条构成，左上角还有一个包含了50颗白色小五角星的蓝色长方形。50颗小星代表了美国的50个州，而13条间纹则象征着美国最早建国时的13块殖民地。</p>
+
+            
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/r.png" alt="russia">
+
+            <h2>俄罗斯</h2>
+
+            <p>俄罗斯联邦的国旗采用传统的泛斯拉夫颜色，旗面由三个平行且相等的横长方形组成，由上到下依次是白、蓝、红三色。</p>
+
+            
+        </div>
+    </div>
+
+    <!-- 特性 -->
+
+    <hr class="feature-divider">
+
+    <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+        <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">中国</a></li>
+        <li><a href="#tab-firefox" role="tab" data-toggle="tab">美国</a></li>
+        <li><a href="#tab-safari" role="tab" data-toggle="tab">俄罗斯</a></li>
+        <li><a href="#tab-opera" role="tab" data-toggle="tab">英国</a></li>
+        <li><a href="#tab-ie" role="tab" data-toggle="tab">法国</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-chrome">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading" style="margin-top:-10px;">中国 <span
+                            class="text-muted">人口最多的国家</span></h2>
+
+                    <p class="lead" style="margin-top:-10px;">中国文化渊远流长、博大精深、绚烂多彩，是东亚文化圈的文化宗主国，在世界文化体系内占有重要地位，由于各地的地理位置、自然条件的差异，人文、经济方面也各有特点。而且还有有多彩的民俗文化，传统艺术形式有诗词、戏曲、书法、国画等，而春节、元宵、清明、端午、中秋、重阳等是中国重要的传统节日。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" style="width:100px;height:100px;" src="images/z.png"
+                         alt="中国">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-firefox">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading" style="margin-top:-10px;">美国 <span class="text-muted">高科技国家</span>
+                    </h2>
+
+                    <p class="lead" style="margin-top:-10px;">美国是一个高度发达的资本主义超级大国，其政治、经济、军事、文化、创新等实力领衔全球。作为超级军事大国，其高等教育水平和科研技术水平也是当之无愧的世界第一，其科研经费投入之大、研究型高校企业之多、科研成果之丰富堪称世界典范。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/a.png" style="width:100px;height:100px;"
+                         alt="美国">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-safari">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading" style="margin-top:-10px;">俄罗斯 <span class="text-muted">国土面积最大的国家</span></h2>
+
+                    <p class="lead" style="margin-top:-10px;">俄罗斯是有较大影响力的强国，其军工实力雄厚，特别是航空航天技术，居世界前列。俄罗斯还是联合国安全理事会五大常任理事国之一，对安理会议案拥有一票否决权。除此以外，俄罗斯还是五个金砖国家之一。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" style="width:100px;height:100px;" src="images/r.png"
+                         alt="俄罗斯">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-opera">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading" style="margin-top:-10px;">英国 <span class="text-muted">日不落国</span>
+                    </h2>
+
+                    <p class="lead" style="margin-top:-10px;">英国是一个高度发达的资本主义国家。欧洲四大经济体之一，其国民拥有较高的生活水平和良好的社会保障制度。作为英联邦元首国、欧盟、申根公约和八国集团成员国、北约创始会员国、英国同时也是联合国安全理事会五大常任理事国之一。.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/eng.png" style="width:100px;height:100px;"
+                         alt="英国">
+                </div>
+                
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-ie">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading" style="margin-top:-10px;">法国 <span class="text-muted">时尚之都</span></h2>
+
+                    <p class="lead" style="margin-top:-10px;">法国是一个高度发达的资本主义国家。欧洲四大经济体之一，其国民拥有较高的生活水平和良好的社会保障制度，是联合国安理会五大常任理事国之一，也是欧盟和北约创始会员国、申根公约和八国集团成员国，和欧洲大陆主要的政治实体之一。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/f.png" style="width:100px;height:100px;"
+                         alt="法国">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+
+    </footer>
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

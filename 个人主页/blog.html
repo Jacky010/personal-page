@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>博客</title>
+<meta name="keywords" content="蒋杰，蒋杰个人主页，蒋杰个人简介，个人主页，个人博客，个人作品" />
+<meta name="description" content="蒋杰个人主页，是专门为蒋杰个人所建设的个人展示平台，采用前后端开发知识，一边学习，一边创作！" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" type="text/javascript">
+function clearText(field){
+
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	<div id="header">
+    	<div id="site_title"><h1><a href="http://www.jiangjie.date">蒋杰主页</a></h1></div>
+        <div class="cleaner"></div>
+    </div> <!-- end of header -->
+    <div id="menu" class="ddsmoothmenu">
+        <ul>
+            <li><a href="index.html">主页</a></li>
+            <li><a href="info.html">个人简介</a>
+                <ul>
+                    <li><a href="resume.html" target="_blank">个人简历</a></li>
+                    
+              	</ul>
+            </li>
+            <li><a href="myworks.html">个人作品</a>
+                <ul>
+                    <li><a href="web_designs.html" target="_blank">网页设计</a></li>
+                    <li><a href="web_effects.html" target="_blank">网页特效</a></li>
+                    <li><a href="js_games.html" target="_blank">JS游戏</a></li>
+                    <li><a href="php_works.html" target="_blank">PHP作品</a></li>
+                    
+              	</ul>
+            </li>
+            <li><a href="blog.html" class="selected">博客</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+        <div id="search_box">
+            <form action="#" method="get">
+                <input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                <input type="submit" name="Search" value="" id="searchbutton" title="Search" />
+            </form>
+        </div>
+        <br style="clear: left" />
+    </div> <!-- end of menu -->
+    
+    <div id="main">
+    	<div id="content" class="float_l">
+            <div class="post">
+            	<h2>HTML新特性的使用技巧</h2>
+	            <div class="post_image"><img src="images/blog/pic1.jpg" alt="Image 01" /><span class="date">June 26, 2016</span></div>
+                <p>HTML5是又一力作，它带来了更多API，让之前需要另写JS文件的才能实现的效果现在通过一个API就可解决，本人觉得最酷炫的当属Canvas，它的出现让许多绘图不再成为不可能，这也是我最喜欢深入了解它的原因，真是魅力无限，值得你去一探究竟。</p>
+                <a href="blog_post.html">继续阅读...</a>
+        	</div>
+            <div class="post">
+	            <h2>CSS制作网页特效方法</h2>
+	            <div class="post_image"><img src="images/blog/pic2.jpg" alt="Image 02" /><span class="date">June 21, 2016</span></div>
+                <p>CSS到现在已经更新到第三个版本，也就是CSS3。CSS3带来更多的新特性，丰富了样式表这个大家族，使今后开发的项目越来越高大上，真是物尽其用，实属不易。</p>
+                <a href="blog_post.html">继续阅读...</a>
+        	</div>
+            <div class="post">
+            	<h2>Jquery的未解之谜</h2>
+	            <div class="post_image"><img src="images/blog/pic3.jpg" alt="Image 03" /><span class="date">June 14, 2016</span></div>
+                <p>
+                Jquery的出现改变了原生JS代码冗余的问题，JQuery带来的不只是代码量的减少，其分装的js文件更是拥有JavaScript所不具备的优势，这就是现在大多数的开发员使用其开发前端的原因。
+                </p>
+                <a href="blog_post.html">继续阅读...</a>
+        	</div>
+        
+         	<div class="pagging">
+                <ul>
+                    <li><a href="#" target="_parent">Previous</a></li>
+                    <li><a href="#" target="_parent">1</a></li>
+                    <li><a href="#" target="_parent">2</a></li>
+                    <li><a href="#" target="_parent">3</a></li>
+                    <li><a href="#" target="_parent">4</a></li>
+                    <li><a href="#" target="_parent">5</a></li>
+                    <li><a href="#/page/6" target="_parent">6</a></li>
+                    <li><a href="#/page/7" target="_parent">Next</a></li>
+                </ul>
+            </div>
+		</div>
+        <div id="sidebar" class="float_r">
+        	<div class="sb_box">
+                <h3>网站推荐</h3>
+                <ul class="sb_list">
+                    <li><a href="http://www.imooc.com" target="_blank">慕课网</a></li>
+                    <li><a href="https://ke.qq.com" target="_blank">腾讯课堂</a></li>
+                    <li><a href="http://dev.dcloud.net.cn/mui/" target="_blank">MUI</a></li>
+                    <li><a href="http://www.bootcss.com" target="_blank">Boostarap</a></li>
+                    <li><a href="http://www.iconfont.cn/plus" target="_blank">阿里巴巴矢量图标库</a></li>
+                    <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+            
+            <div class="sb_box">
+                <h3>轻松一刻</h3>
+                <ul class="popular_post">
+            		<li><a href="#" style="text-decoration:none; font-size:16px; color:#222; text-align: center; padding-bottom:5px"><strong>动感地带</strong></a>
+                    <div id="player"> 
+   					<audio id="musicbox"></audio> 
+   					<div id="controls" class="clearfix controls"> 
+    				<div id="play" class="playing"></div> 
+    				<div id="next"></div> 
+    				<div id="progress"> 
+    				<div></div> 
+     				<p id="time">00:00 / 00:00</p> 
+    				</div> 
+    				<div id="volume"> 
+     				<div></div> 
+    				</div> 
+   					</div> 
+   					<div class="bar">
+    				<button>重置列表</button>
+    				<button>随机打乱</button>
+    				<button>清空列表</button>
+   					</div> 
+   					<ul id="musiclist"></ul> 
+   					<div class="bar bottom">
+    				<span>播放模式：</span>
+    				<span id="mode">全部</span>
+   					</div> 
+  					</div> 
+                </li>
+                <li><a href="#" style="text-decoration:none;font-size:16px; color:#222; text-align: center; padding-bottom:5px;"><strong>笑话盒子</strong></a>众里寻她千百度，踏平脚下路。蓦然回首细环顾，大婶大娘无数。偶有美女光顾，还是有夫之妇，余下大多数，基本不堪入目。</li>
+                <li>
+                	<a href="#" style="text-decoration:none; font-size:16px; color:#222; text-align: center; padding-bottom:5px;"><strong>每日一读</strong></a>感情再深，你不去呵护，慢慢就淡了，许多熟悉的事，你不去回味，渐渐就淡了。
+                	<cite style="float:right"><span>-- Jacky</span></cite>
+                </li>
+			</ul>
+            </div>
+        </div>
+        <div class="cleaner"></div>
+    </div>
+    
+    <!--<div id="bottom">
+    	<div class="col one_fourth">
+        	<h5>书籍推荐</h5>
+            <ul class="footer_link">
+            		<li><a href="http://baike.baidu.com/link?url=G1WVMqHAXZBVXdDku_dlL4GBDaEqtFDHhNcSCY6AFx8S716CZQySaOxdW7f627Z8UyI9sx5b7NZmDuSf7HiutG1cRtaRPEQnjuhuKsBsmY_Mb66j43PDG5NUp9PaXL18A0JG_kj3LcTTAiyn5jlKotMRabJVz177P56th7FA_aC" target="_blank">《HTML5与CSS3权威指南》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=NJLmMviV7a33yJCJx6jOI2tswZRqm9rC1hdKTW5DvFYu8gdSothy04cM4nbIuiLF1iJek9Nx4c1OkLyyEIOPRW3X-qbCE014bFASmtL2zv8I6ONvdfqWDdTM3dq59IW1gx1o1qISdLxCgwT01URD7q" target="_blank">《JavaScript设计模式》</a></li>
+                <li><a href="https://book.douban.com/subject/25823709/" target="_blank">《JQuery技术内幕》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=rKFlF_-cfBdCzoRS2RDC3eAQskxXBVnWoPUFJ56jHTbg_Rv2puansOhITdj5fBlC7i-hoDGrIkaFJX2-KI5RiipeRoQmczu5dpMXdn29x0Bx9uRJ0bLwKzbBqlkuCM7cRkzwjGzeVpVQWuzY7IMnjtpXu0aHAM4juA97P6clYUe" target="_blank">《JavaScript面向对象精要》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=KPiGp_bM1vmchS8uNSO6qEk4qGwrt6LpsK5Ak2niGXoCBTPbM8L5-_9x1W8QDcrSbTRXkKKvUsdX4M6PRiMQyM9pQblATIaG_r9aVFWjPuO3baV6P7MNWs4nShcHxfdQJGWBl_6Z2FB3MxXc27RMV-vSdeQ2LIsF_Uh2WyqYzYeUeNN2ibs27oJXnsqXq3_H#1" target="_blank">《Ajax经典案例开发大全》</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth">
+        	<h5>美文赏析</h5>
+            <ul class="footer_link">
+            		<li><a href="http://www.sanwen8.cn/subject/1401511/" target="_blank">采一笔清风流云，入眉</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1401317/" target="_blank">携一斛春色，沉醉</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1401238/" target="_blank">三月烟花，款款情深</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1400430/" target="_blank">生活赋</a></li>
+                <li> <a href="http://www.sanwen8.cn/subject/1400424/" target="_blank">春风十里</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth">
+        	<h5>友情链接</h5>
+            <ul class="footer_link">
+            	<li><a href="http://www.jiangjie.date">蒋杰主页</a></li>
+                <li><a href="http://www.cdut.edu.cn">成都理工大学</a></li>
+            		<li><a href="http://www.aao.cdut.edu.cn">成都理工大学教务处</a></li>
+                <li><a href="http://www.cist.cdut.edu.cn">成都理工大学信息科学与技术学院</a></li>
+                <li><a href="mailto:1126651826@qq.com">写给版主</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth last_box">
+        	<h5>联系方式</h5>
+            <ul class="footer_link">
+            		<li><a href="#" class="qq social">1126651826</a></li>
+                <li><a href="#" class="weixin social">1126651826@qq.com</a></li>
+                <li><a href="#" class="sinaweibo social">J-蒋杰</a></li>
+                
+			</ul>
+        </div>
+        <div class="cleaner"></div>
+    </div>
+    -->
+    <div id="footer">
+    	Copyright © 2048 My Homepage Name | Designed by <a href="#" target="_parent">蒋杰主页</a>
+    </div>
+</div>
+
+</body>
+</html>

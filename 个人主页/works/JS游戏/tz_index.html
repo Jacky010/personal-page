@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>弹砖游戏</title>
+	</head>
+	<body>
+		<div id="top0" style="margin-top: 5px;left: 20px;width: 248px;font-size: 13px;line-height: 20px;position: absolute;">
+		分数：0分，速度：1	
+		</div>
+		<div id="top1" style="left:260px;width: 40px;position: absolute;"></div>
+		<form name="f1" method="post">
+			<input type="button" name="b1" value="暂停" onclick="pauseplay();" style="position: absolute;left: 270px;top:13px;"/>
+		</form>
+		<canvas id="myCanvas" width="300" height="400" style="margin-top: 25px;background: #eee;border: 1px solid #ccc;"></canvas>
+		
+		
+		<script type="text/javascript">
+			var myCanWidth=300;//场景的宽
+			var myCanHeight=400;//场景的
+			var gameLoop;//setInterval()函数返回值
+			var gamescore=0;//游戏初始分数
+			var speed=1;//游戏初始速度
+			var movedirectX=0;//X轴移动方向，0向左，1向右
+			var movedirectY=0;//Y轴移动方向，0向下，1向上
+			var c=document.getElementById('myCanvas');
+			var showtop=document.getElementById("top0");
+			var cxt=c.getContext("2d");
+			//游戏下面挡板定义
+			var player0={
+				x:0,//X轴坐标
+				y:380,//Y轴坐标
+				width:80,//宽
+				height:20//高
+			};
+			//游戏中反弹的小球的定义 
+			var player1={
+				x:0,//X轴坐标
+				y:0,//Y轴坐标
+				width:24,//宽
+				height:24,//高
+				drawplayer1:function(){
+					//先清除以前位置的小球
+					cxt.clearRect(this.x,this.y,this.width,this.height);
+					//判断小球运行的方向
+					if (this.x+this.width>=myCanWidth) {
+						movedirectX=1;
+					}
+					else if (this.x<=0) {
+						movedirectX=0;
+					}
+					//判断小球运行的Y方向是否到达底部
+					if (this.y+this.height>=myCanHeight-player0.height) {
+						//判断是小球到达底部时是否碰到挡板
+						if ((player0.x)>(this.x+player1.width/2)||(player0.x+player0.width)<(this.x,player1.width/2)) {
+							clearInterval(gameLoop);//停止循环，游戏结束
+							alert("游戏结束！当前分数："+gamescore);
+							//重新开始游戏
+							drawplayer0(0);
+							player0.x=0;
+							drawplayer0(1);
+							this.x=0;
+							this.y=0;
+							drawmove();
+							gamescore=0;
+							speed=0;
+							gameLoop=setInterval(function(){player1.drawplayer1()},10-speed);
+						}
+						else{
+							gamescore++;
+							showtop.innerHTML="分数："+gamescore+"分，速度："+speed;
+							movedirectY=1;
+						}
+					}
+					else if (this.y<=0) {
+						movedirectY=0;
+					}
+					//依据X方向，Y方向来移动小球
+					if (movedirectX==0) {
+						this.x=this.x+1;//向左移动
+					}
+					else{
+						this.x=this.x-1;//向右移动
+					}
+					if (movedirectY==0) {
+						this.y=this.y+1;//向下移动
+					}
+					else{
+						this.y=this.y-1;//向上移动
+					}
+					//当分数每增加10分，则速度增加1
+					if (gamescore%10==0) {
+						clearInterval(gameLoop);//清除循环
+						speed++;
+						gamescore++;//分数加1，否则将会导致速度乱
+						if (player0.width>10) {
+							player0.width=player0.width-10;//底部挡板宽度减10
+						}
+						gameLoop=setInterval(function(){player1.drawplayer1()},10-speed);
+						showtop.innerHTML="分数："+gamescore+"分，速度："+speed;
+					}
+					drawmove();//画出移动的小球
+				}
+			}
+			//游戏暂停按钮的处理
+			function pauseplay(){
+				if (document.f1.b1.value=='暂停') {
+					clearInterval(gameLoop);
+					pause1.style.visibility='visibility';
+					document.f1.b1.value='开始';
+				}
+				else{
+					gameLoop=setInterval(function(){player1.drawplayer1()},10-speed);
+					pause1.style.visibility='hidden';
+					document.f1.b1.value='暂停';
+				}
+			}
+			//在指定的位置画出小球，注意画实圆的函数用法
+			function drawmove(){
+				var dotx,doty,dotrad;
+				dotx=player1.x+player1.width/2;
+				doty=player1.y+player1.height/2;
+				dotrad=player1.width/2;
+				cxt.fillStyle="red";
+				cxt.beginPath();
+				cxt.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				cxt.closePath();
+				cxt.fill();
+				/*如果放一幅图可以改写为下面的写法
+				var img=new Image();
+				img.src='';
+				cxt.drawImage(img,player1.x,player1.y,player1.width,player1.height);
+				*/
+			}
+			//画底部挡板的函数
+			function drawplayer0(flag){
+				if (flag==0) {//清除底部挡板
+					cxt.fillStyle="#6cf";
+					cxt.clearRect(player0.x,player0.y,player0.width,player0.height);
+				}
+				else{//画出底部挡板
+					cxt.fillStyle="yellow";
+					cxt.fillRect(player0.x,player0.y,player0.width,player0.height);
+				}
+			}
+			//当鼠标在场景区域内移动时，移动到底部挡板
+			document.onmousemove=function(){//当鼠标移动时的事件
+				drawplayer0(0);//清除底部挡板
+				var x=event.clientX;//取当前鼠标的X坐标
+				if (x+player0.width/2>myCanWidth) {//当超出了场景的右边界，则定位最右边
+					player0.x=myCanWidth-player0.width;
+				}
+				else{
+					if (x<player0.width/2) {//当超出了场景的左边界，则定位最左边
+						player0.x=0;
+					}
+					else{//依据当前鼠标的X坐标定位
+						player0.x=x-player0.width/2;     
+					}
+					drawplayer0(1);//画底部挡板
+				}
+			}
+			//游戏的初始化，先画出底部挡板，通过setInterval让小球不停地移动
+			drawplayer0(1);
+			gameLoop=setInterval(function(){player1.drawplayer1()},10-speed);
+		</script>
+	</body>
+</html>

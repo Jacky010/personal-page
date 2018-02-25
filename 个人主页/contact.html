@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>联系我们</title>
+		<meta name="keywords" content="蒋杰，蒋杰个人主页，蒋杰个人简介，个人主页，个人博客，个人作品" />
+		<meta name="description" content="蒋杰个人主页，是专门为蒋杰个人所建设的个人展示平台，采用前后端开发知识，一边学习，一边创作！" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+		<script language="javascript" type="text/javascript">
+			function clearText(field) {
+
+				if(field.defaultValue == field.value) field.value = '';
+				else if(field.value == '') field.value = field.defaultValue;
+
+			}
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/canlder.js"></script>
+		<script type="text/javascript" src="js/ddsmoothmenu.js">
+		</script>
+
+		<script type="text/javascript">
+			ddsmoothmenu.init({
+				mainmenuid: "menu", //menu DIV id
+				orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+				classname: 'ddsmoothmenu', //class added to menu's outer DIV
+				//customtheme: ["#1c5a80", "#18374a"],
+				contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+			})
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="wrapper">
+			<div id="header">
+				<div id="site_title">
+					<h1><a href="http://www.jiangjie.date">蒋杰主页</a></h1></div>
+				<div class="cleaner"></div>
+			</div>
+			<!-- end of header -->
+			<div id="menu" class="ddsmoothmenu">
+				<ul>
+					<li>
+						<a href="index.html">主页</a>
+					</li>
+					<li>
+						<a href="info.html">个人简介</a>
+						<ul>
+							<li>
+								<a href="resume.html">个人简历</a>
+							</li>
+
+						</ul>
+					</li>
+					<li>
+						<a href="myworks.html">个人作品</a>
+						<ul>
+							<li>
+								<a href="web_designs.html" target="_blank">网页设计</a>
+							</li>
+							<li>
+								<a href="web_effects.html" target="_blank">网页特效</a>
+							</li>
+							<li>
+								<a href="js_games.html" target="_blank">JS游戏</a>
+							</li>
+							<li>
+								<a href="php_works.html" target="_blank">PHP作品</a>
+							</li>
+
+						</ul>
+					</li>
+					<li>
+						<a href="blog.html">博客</a>
+					</li>
+					<li>
+						<a href="contact.html" class="selected">联系我们</a>
+					</li>
+				</ul>
+				<div id="search_box">
+					<form action="#" method="get">
+						<input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+						<input type="submit" name="Search" value="" id="searchbutton" title="Search" />
+					</form>
+				</div>
+				<br style="clear: left" />
+			</div>
+			<!-- end of menu -->
+
+			<div id="main">
+				<div id="content" class="float_l">
+					<h2>联系信息</h2>
+					<h4>Send me a message now!</h4>
+					<p>真诚期待您的联系，很高兴能与您一起交流探讨开发过程中遇见的技术问题，您的宝贵建议将使我们共同进步！Come Guys!</p>
+					<div id="contact_form">
+						<form method="post" name="contact" action="#">
+
+							<label for="author">Name:</label> <input type="text" id="author" name="author" class="required input_field" />
+							<div class="cleaner h10"></div>
+
+							<label for="email">Email:</label> <input type="text" id="email" name="email" class="validate-email required input_field" />
+							<div class="cleaner h10"></div>
+
+							<label for="subject">Subject:</label> <input type="text" name="subject" id="subject" class="input_field" />
+							<div class="cleaner h10"></div>
+
+							<label for="text">Message:</label> <textarea id="text" name="text" rows="0" cols="0" class="required"></textarea>
+							<div class="cleaner h10"></div>
+
+							<input type="submit" value="Send" id="submit" name="submit" onclick="send();" class="submit_btn float_l" />
+							<input type="reset" value="Reset" id="reset" name="reset" class="submit_btn float_r" />
+
+						</form>
+					</div>
+					<script type="text/javascript">
+						function send() {
+							alert("发送成功，谢谢您的参与！");
+						}
+					</script>
+
+				</div>
+				<div id="sidebar" class="float_r">
+					<div class="sb_box">
+						<h3>网站推荐</h3>
+						<ul class="sb_list">
+							<li>
+								<a href="http://www.imooc.com" target="_blank">慕课网</a>
+							</li>
+							<li>
+								<a href="https://ke.qq.com" target="_blank">腾讯课堂</a>
+							</li>
+							<li>
+								<a href="http://dev.dcloud.net.cn/mui/" target="_blank">MUI</a>
+							</li>
+							<li>
+								<a href="http://www.bootcss.com" target="_blank">Boostarap</a>
+							</li>
+							<li>
+								<a href="http://www.iconfont.cn/plus" target="_blank">阿里巴巴矢量图标库</a>
+							</li>
+							<li>
+								<a href="https://github.com" target="_blank">GitHub</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="sb_box">
+						<h3>工作日历</h3>
+						<div id="Demo">
+							<div id="CalendarMain">
+								<div id="title">
+									<a class="selectBtn month" href="javascript:" onclick="CalendarHandler.CalculateLastMonthDays();">
+										<</a>
+											<a class="selectBtn selectYear" href="javascript:" onClick="CalendarHandler.CreateSelectYear(CalendarHandler.showYearStart);">2016年</a>
+											<a class="selectBtn selectMonth" onClick="CalendarHandler.CreateSelectMonth()">11月</a>
+											<a class="selectBtn nextMonth" href="javascript:" onClick="CalendarHandler.CalculateNextMonthDays();">></a>
+											<a class="selectBtn currentDay" href="javascript:" onClick="CalendarHandler.CreateCurrentCalendar(0,0,0);">今天</a>
+								</div>
+								<div id="context">
+									<div class="week">
+										<h3> 一 </h3>
+										<h3> 二 </h3>
+										<h3> 三 </h3>
+										<h3> 四 </h3>
+										<h3> 五 </h3>
+										<h3> 六 </h3>
+										<h3> 日 </h3>
+									</div>
+									<div id="center">
+										<div id="centerMain">
+											<div id="selectYearDiv"></div>
+											<div id="centerCalendarMain">
+												<div id="Container"></div>
+											</div>
+											<div id="selectMonthDiv"></div>
+										</div>
+									</div>
+									<div id="foots">
+										<a id="footNow">19:14:34</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4 style="margin-top:15px;">联系地址-</h4>
+						<h6><strong>学校地址:</strong></h6>
+						<a href="http://www.cdut.edu.com" target="_blank">成都理工大学</a><br> 四川省成都市成华区二仙桥东三路1号
+						<br> 邮编：610059
+						<br><br>
+
+						<strong>Phone:</strong> 150-8579-5432 <br>
+						<strong>Email:</strong>
+						<a href="mailto:1126651826@qq.com">1126651826@qq.com</a> <br>
+
+					</div>
+				</div>
+
+				<!--<div id="bottom">
+	<div class="col one_fourth">
+        	<h5>书籍推荐</h5>
+            <ul class="footer_link">
+            		<li><a href="http://baike.baidu.com/link?url=G1WVMqHAXZBVXdDku_dlL4GBDaEqtFDHhNcSCY6AFx8S716CZQySaOxdW7f627Z8UyI9sx5b7NZmDuSf7HiutG1cRtaRPEQnjuhuKsBsmY_Mb66j43PDG5NUp9PaXL18A0JG_kj3LcTTAiyn5jlKotMRabJVz177P56th7FA_aC" target="_blank">《HTML5与CSS3权威指南》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=NJLmMviV7a33yJCJx6jOI2tswZRqm9rC1hdKTW5DvFYu8gdSothy04cM4nbIuiLF1iJek9Nx4c1OkLyyEIOPRW3X-qbCE014bFASmtL2zv8I6ONvdfqWDdTM3dq59IW1gx1o1qISdLxCgwT01URD7q" target="_blank">《JavaScript设计模式》</a></li>
+                <li><a href="https://book.douban.com/subject/25823709/" target="_blank">《JQuery技术内幕》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=rKFlF_-cfBdCzoRS2RDC3eAQskxXBVnWoPUFJ56jHTbg_Rv2puansOhITdj5fBlC7i-hoDGrIkaFJX2-KI5RiipeRoQmczu5dpMXdn29x0Bx9uRJ0bLwKzbBqlkuCM7cRkzwjGzeVpVQWuzY7IMnjtpXu0aHAM4juA97P6clYUe" target="_blank">《JavaScript面向对象精要》</a></li>
+                <li><a href="http://baike.baidu.com/link?url=KPiGp_bM1vmchS8uNSO6qEk4qGwrt6LpsK5Ak2niGXoCBTPbM8L5-_9x1W8QDcrSbTRXkKKvUsdX4M6PRiMQyM9pQblATIaG_r9aVFWjPuO3baV6P7MNWs4nShcHxfdQJGWBl_6Z2FB3MxXc27RMV-vSdeQ2LIsF_Uh2WyqYzYeUeNN2ibs27oJXnsqXq3_H#1" target="_blank">《Ajax经典案例开发大全》</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth">
+        	<h5>美文赏析</h5>
+            <ul class="footer_link">
+            		<li><a href="http://www.sanwen8.cn/subject/1401511/" target="_blank">采一笔清风流云，入眉</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1401317/" target="_blank">携一斛春色，沉醉</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1401238/" target="_blank">三月烟花，款款情深</a></li>
+                <li><a href="http://www.sanwen8.cn/subject/1400430/" target="_blank">生活赋</a></li>
+                <li> <a href="http://www.sanwen8.cn/subject/1400424/" target="_blank">春风十里</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth">
+        	<h5>友情链接</h5>
+            <ul class="footer_link">
+            	<li><a href="http://www.jiangjie.date">蒋杰主页</a></li>
+                <li><a href="http://www.cdut.edu.cn">成都理工大学</a></li>
+            		<li><a href="http://www.aao.cdut.edu.cn">成都理工大学教务处</a></li>
+                <li><a href="http://www.cist.cdut.edu.cn">成都理工大学信息科学与技术学院</a></li>
+                <li><a href="mailto:1126651826@qq.com">写给版主</a></li>
+			</ul>
+        </div>
+        <div class="col one_fourth last_box">
+        	<h5>联系方式</h5>
+            <ul class="footer_link">
+            		<li><a href="#" class="qq social">1126651826</a></li>
+                <li><a href="#" class="weixin social">1126651826@qq.com</a></li>
+                <li><a href="#" class="sinaweibo social">J-蒋杰</a></li>
+                
+			</ul>
+        </div>
+        <div class="cleaner"></div>
+    </div>
+    -->
+
+				<div id="footer" style="margin-top: -30px;">
+					Copyright © 2048 My Homepage Name | Designed by
+					<a href="http://www.jiangjie.date" target="_blank">蒋杰主页</a>
+                </div>
+      </div>
+	</body>
+
+</html>
